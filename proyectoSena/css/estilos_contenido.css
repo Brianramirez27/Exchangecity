@@ -1,0 +1,399 @@
+/* estilos generales de toda la pagina */
+
+*{
+  margin: 0;  
+  padding: 0;
+  
+}
+
+/* estilos del body */
+body{
+  background:linear-gradient(20deg, grey ,black 70% , grey);
+  /*background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);*/
+  
+}
+body a{
+  color: white;
+}
+/*estilos header*/
+header{
+  position: fixed;
+  z-index: 2;
+  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  flex-direction: row;
+  
+ 
+}
+.logo{
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  width: 40%;
+  gap: 3rem;
+  
+}
+.logo span{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo a{
+  width: 17.5%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-right: 0.03rem solid white;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+.iconoLogo{
+  width: 2rem;
+  height: 2rem;
+  color: white;
+  border: 2px solid white;
+  border-radius: 1rem 0.3rem 1rem;
+  
+}
+
+
+.logo h1{
+  display: block;
+  color: white;
+}
+
+.iniciarSeccion{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: right;
+  align-items: center;
+  gap: 10rem;
+  
+}
+.iniciarSeccion  .buscador {
+  width: 20rem;
+  height: 1.5rem;
+  border: 0;
+  border-bottom: 1px solid white;
+  background: inherit;
+
+}
+
+.iniciarSeccion button{
+  width:3rem;
+  height: 100%;
+  background-color: transparent;
+  border: 0;
+}
+.iniciarSeccion span {
+  font-size: 2rem;
+  width: 3rem;
+  height: 100%;
+  color: white;
+}
+
+.iniciarSeccion  span{
+  width: 3rem;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.iconoLogin:hover{
+  background:linear-gradient(20deg, grey ,black 70% , grey);
+  
+}
+/* estilos del acount  o login */
+.acount{
+  position: fixed;
+  z-index: 3;
+  /* background-color: aqua; */
+  background-color: rgb(0,0,0,0.5);
+  width: 100%;
+  height: 100vh;
+  display: none;
+  flex-direction: row;
+  justify-content:center;
+  align-items: center;
+  top: 3rem;
+  gap: 2rem;
+ 
+}
+.verAcount{
+  display: flex;
+}
+.login{
+width:30%;
+height:60%;
+background:linear-gradient(20deg, grey ,black 70% , grey);
+/* background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet); */
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+color: white;
+gap: 1rem;
+padding: 1rem;
+
+}
+.login h3{
+  display: flex;
+  justify-content: center;
+
+}
+.acount .inputLogin{
+  width:80%;
+  height: 1.5rem;
+  border: 0;
+  border-bottom: 1px solid white;
+  background-color:transparent;
+  color: white;
+}
+.login .labelLogin,.aLogin{
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  width: 100%;
+  height: 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  
+  
+}
+.login input[type="submit"]{
+  margin: 2rem;
+  width: 7rem;
+  background:linear-gradient(20deg, grey ,black 70% , grey);
+  color: white;
+  border-radius: 1rem 1rem 1rem;
+}
+
+
+ /* estilos/navegacion */
+#menu{
+  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+  /*background-color: rgba(0, 0, 0, .4);*/
+  position:fixed;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  width: 5%;
+  top: 3rem;
+  overflow: hidden;
+  gap: 2rem;
+}
+.icono{
+  width: auto;
+  height: auto;
+  padding: 0.2rem;
+  border: 2px solid white;
+  border-radius: 1rem 0.3rem 1rem;
+  flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.menuIcono{
+  display: flex;
+  position: relative;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+
+.icono a{
+  height: auto;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  
+}
+.icono span{
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 0.8rem;
+  
+  
+}
+.icono:hover{
+  background:linear-gradient(20deg, grey ,black 70% , grey);
+  /*background: linear-gradient(20deg, blueviolet ,black);*/
+
+}
+.menuIcono:hover{
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+
+/* estilos de aside o conteiner */
+#container{
+  width:95%;
+  height: auto;
+  display:flex;
+  text-align: center;
+  float: right;
+  margin-top: 5rem;
+}
+
+section{
+  width: 100% ;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  
+}
+.cars {
+  width: 150px;
+  height: 280px;
+  overflow: hidden;
+  margin: 0.3rem;
+  border:2px solid #750a45;
+  border-radius: 2rem 0.5rem 2rem;
+  box-shadow: 0.3rem 0.3rem 0.3rem #750a45;
+  
+  
+}
+.cars a{
+  text-decoration: none;
+}
+.cars h3{
+  position:relative;
+  z-index: 1;
+  font-size: 0.8rem;
+  display: inline-flex;
+  padding: 0.1rem;
+  color: white;
+  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+  /*background: linear-gradient(20deg, blueviolet ,black);*/
+  float: right;
+  
+  
+}
+.cars img{
+position: relative;
+bottom: 1rem;
+width:100%;
+height: 70%;
+
+}
+.conterCars  {
+  position: relative;
+  bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 0.5rem;
+  color: white;
+  
+}
+.conterCars a h2:hover{
+  font-size: 1.6rem;
+  color:blueviolet ;
+  
+}
+.titulo{
+  display:inline-flex;
+  margin: 0.5rem;
+  padding: 10px;
+  border: 0.2rem solid #750a45 ; ;
+  border-radius: 1rem 1rem 1rem ;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgb(7, 3, 3);
+  color: white;
+  
+ 
+}
+/* estilos de l paginacion */
+.contenidoPaginacion{
+  width: 100%;
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.paginas{
+  padding: 0.5rem;
+  border: 0.2rem solid #750a45 ;
+  border-radius: 1rem 1rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0.2rem;
+}
+.pagi{
+  
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color:white;
+  text-decoration: none;
+
+}
+.pagi:hover{
+  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+}
+.index{
+  width: 7rem;
+}
+
+/*estilos del fotter*/
+#footer{
+  width: 95%;
+  height: auto;
+  float: right;
+  margin-top: 2rem;
+  border-top: 0.2rem solid white;
+  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+  
+}
+
+footer h1 {
+  display:flex;
+  justify-content: center;
+  color: white;
+ 
+}
+ #footer .imgContac{ 
+  height: auto;
+  display: flex;
+  justify-content: space-around;
+  margin: 2rem;
+}
+.imgContac img{
+  height: 2.5rem;
+  width: 2.5rem;
+  border: 00.2rem solid white;
+  border-radius: 1.5rem 0.5rem 1.5rem;
+  box-shadow: 0.5rem 0.5rem 0.5rem black;
+  padding: 0.7rem;
+}
+.imgContac img:hover{
+  background:linear-gradient(20deg, grey ,black 70% , grey);
+}
+.copy {
+  display:flex ;
+  justify-content: center;
+  color: white;
+  width: 100%;
+  font-size: 1.5rem;
+  margin-top: 3rem;
+}
