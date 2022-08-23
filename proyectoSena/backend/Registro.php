@@ -20,7 +20,7 @@ if(isset($_POST)){
      }else{
           $error["nombre"]="Nombre incorrecto";
      }
-     if(!empty("apellido") && !is_numeric($apellido) && !preg_match("/[*][_][.]/",$apellido)){
+     if(!empty($apellido) && !is_numeric($apellido) && !preg_match("/[*][_][.]/",$apellido)){
           $apellido=$apellido;
 
      }else{
@@ -34,6 +34,19 @@ if(isset($_POST)){
 
      if(!empty($correo) && filter_var($correo,FILTER_VALIDATE_EMAIL)){
           
+     }
+
+     /*validacion de la password */
+     if(!empty($contraseña)){
+          $contraseña=$contraseña;
+     }else{
+          $error["password"] = "la contraseña esta vacia";
+     }
+
+
+     /*despues de que las datos fueron validados comprovamos que no halla ningun error */
+     if(empty($error)){
+
      }
 
 }
