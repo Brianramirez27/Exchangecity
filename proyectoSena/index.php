@@ -3,10 +3,6 @@ include_once "/wamp64/www/proyectoSena/Includes/header.php";
 
 include_once "/wamp64/www/proyectoSena/Includes/menulateral.php";
 
-
-
-
-
 ?>
  
  
