@@ -3,6 +3,10 @@ include_once "/wamp64/www/proyectoSena/Includes/header.php";
 
 include_once "/wamp64/www/proyectoSena/Includes/menulateral.php";
 
+
+
+
+
 ?>
  
  
@@ -15,229 +19,14 @@ include_once "/wamp64/www/proyectoSena/Includes/menulateral.php";
     <section>
       <div class="cars">
           <h3>Categoria</h3>
-          <img src="/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
           <div class="conterCars">
             <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
             <p>especificacion del producto</p>
           </div>
         
       </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="no imagen">
-      <div class="conterCars">
-         <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a> 
-          <p>especificacion del producto</p>
-      </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="no imagen">
-      <div class="conterCars">
-          <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
-          <p>especificacion del producto</p>
-      </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="no imagen">
-        <div class="conterCars">
-          <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="no imagen">
-        <div class="conterCars">
-          <a href="/proyectoSena/paginas/descricion.php"><h2>producto</h2></a>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="no imagen">
-        <div class="conterCars">
-          <a href="/proyectoSena/paginas/descricion.php"><h2>producto</h2></a>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/tableta.jfif" alt="no imagen">
-        <div class="conterCars">
-          <a href="/proyectoSena/paginas/descricion.php"><h2>producto</h2></a>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="no imagen">
-        <div class="conterCars">
-          <a href="/proyectoSena/paginas/descricion.php"><h2>producto</h2></a>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/tableta.jfif" alt="">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/tableta.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/tableta.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PREOYECTOSENA/imagenes/conteiner/computador.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PREOYECTOSENA/imagenes/conteiner/tableta.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/conteiner/tableta.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
-      <div class="cars">
-        <h3>Categoria</h3>
-        <img src="/PROYECTOSENA/imagenes/container/celular.jfif" alt="no imagen">
-        <div class="conterCars">
-          <h2>producto</h2>
-          <p>especificacion del producto</p>
-        </div>
-      </div>
+    
       <!-- paginacion -->
       <div class="contenidoPaginacion">
         <div class="paginas">
@@ -256,6 +45,6 @@ include_once "/wamp64/www/proyectoSena/Includes/menulateral.php";
 
 
   <?php 
-  include_once "/wamp64/www/proyectoSena/Includes/footer.php"
+  include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
   
   ?>
