@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/PROYECTOSENA/css/estilos_contenido.css">
+  <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/index.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <title>Contenido</title>
 </head>
@@ -40,24 +40,30 @@
         <input class="inputLogin" type="password" name="password">
         <input type="submit" value="Iniciar Secion">
     </form>
-    <form  class="registro login"action="/PROYECTOSENA/backend/loginRegistro.php" method="post">
+    <form  class="registro login"action="/exchangecity/PROYECTOSENA/backend/Registro.php" method="post">
       <h3>Registro</h3>
-      <label class="labelLogin" for="nombre">nombre</label>
-      <input  class="inputLogin" type="text" name="nombre">
+      <label class="labelregistro labelLogin" for="nombre">Nombre</label>
+      <input  class="inputregistro inputLogin" type="text" name="nombre">
       
-      <label class="labelLogin" for="apellido">apellido</label>
-      <input class="inputLogin" type="text" name="apellido">
+      <label class="labelregistro labelLogin" for="apellido">Apellido</label>
+      <input class="inputregistro inputLogin" type="text" name="apellido">
 
-      <label class="labelLogin" for="Correo">correo</label>
-      <input class="inputLogin" type="email" name="correo">
+      <label class="labelregistro labelLogin" for="Correo">Correo</label>
+      <input class="inputregistro inputLogin" type="email" name="correo">
 
-      <label class="labelLogin" for="pasword">Contraseña</label>
-      <input class="inputLogin" type="password" name="password">
+      <label  class="labelregistro labelLogin" for="pasword">Contraseña</label>
+      <input  class="inputregistro inputLogin" labelLogin" type="password" name="password">
+
+      <label  class="labelregistro labelLogin" for="RegiistroOpcion">Tipo de registro</label>
+      <select  class="RegistroOpcion inputLogin"  name =RegistroOpcion>
+        <option>Usuario</option>
+        <option>Administrador</option>
+      </select>
+
+      <label class="RegistroCodigo labelLogin" for="RegistroCodigo"></label>
+      <input class="RegistroCodigo inputLogin"  type="number" name="RegistroCodigo" placeholder="Codigo de administrador">
       <input  type="submit" value="Registrar">
-      
+
     </form>
-    <div class="registro">
-      
-    </div>
   </div> 
-  <script src="/PROYECTOSENA/js/index.js"></script>
+  <script src="/exchangecity/PROYECTOSENA/js/index.js"></script>
