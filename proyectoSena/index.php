@@ -1,10 +1,7 @@
 <?php 
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
-
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
-
 ?>
- 
  
  
  <!--contenido de la pagina o aside-->

@@ -5,8 +5,8 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/PROYECTOSENA/css/estilos_contenido.css">
-  <link rel="stylesheet" href="/PROYECTOSENA/css/descripcion.css">
+  <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/index.css">
+  <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/descripcion.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <title>Contenido</title>
 </head>
@@ -15,7 +15,7 @@
   <!--header-->
   <header id="header" >
     <div class="logo">
-      <a href="/PROYECTOSENA/index.php">
+      <a href="/exchangecity/PROYECTOSENA/index.php">
         <span class="material-symbols-outlined iconoLogo">
           compare_arrows
         </span>
@@ -61,36 +61,36 @@
       
     </div>
   </div> 
-  <script src="/PROYECTOSENA/js/index.js"></script>
+  <script src="/exchangecity/PROYECTOSENA/js/index.js"></script>
   <!-- Menu lateral -->
   <nav id="menu">
     <div class="icono">
-      <a class="menuObjeto" href="/PROYECTOSENA/index.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/house.svg" alt="inicio.svg">
+      <a class="menuObjeto" href="/exchangecity/PROYECTOSENA/index.php">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/house.svg" alt="inicio.svg">
         <span>Inicio</span>
       </a>
     </div>
     <div class="icono">
       <a class="menuObjeto" href="televisores.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/tv.svg" alt="televisores.svg">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/tv.svg" alt="televisores.svg">
         <span>TV</span>
       </a>
     </div>
     <div class="icono">
       <a class="menuObjeto" href="movil.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/smartphone.svg" alt="movil.svg">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/smartphone.svg" alt="movil.svg">
         <span>Movil</span>
       </a>
     </div>
     <div class="icono">
       <a class="menuObjeto" href="computadoras.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/pc.svg" alt="computadoras.svg">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/pc.svg" alt="computadoras.svg">
         <span>PC</span>
       </a>
     </div>
     <div class="icono">
       <a class="menuObjeto" href="consolas.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/console-controller.svg" alt="consolas.svg">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/console-controller.svg" alt="consolas.svg">
         <span> Consolas</span>
       </a>
     </div>
@@ -102,7 +102,7 @@
     </div>
     <article>
         <div class="producto">
-            <img src="/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
+            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
         </div>
         <div class="descricion">
             <h2>nombre producto</h2>
@@ -146,22 +146,22 @@
     </article>
     <section class="fotos">
         <div class="galeria">
-            <img src="/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
-            <img src="/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="">
-            <img src="/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="">
-            <img src="/PROYECTOSENA/imagenes/conteiner/tableta.jfif" alt="">
-            <img src="/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
-            <img src="/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
+            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="">
+            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="">
+            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/tableta.jfif" alt="">
+            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
+            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
         </div>
         <div class="galeriaPrincipal">
             <div class="galeriaInterna">
-                <img src="/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="" id="imagenActiva">
+                <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="" id="imagenActiva">
                 <button class="btnCerrar">X</button>
                 <!-- <button class="btnAtras">&Lt;</button>
                 <button class="btnAdelante">&GT;</button> -->
             </div>
         </div>
-        <script src="/PROYECTOSENA/js/descricion.js"></script>
+        <script src="/exchangecity/PROYECTOSENA/js/descricion.js"></script>
     </section>
     </div>
     <section>
@@ -175,16 +175,16 @@
     <h1>Contacto</h1>
     <div class="imgContac">
       <a>
-        <img src="/PROYECTOSENA/imagenes/footer/whatsapp-logo-variant-svgrepo-com.svg" alt="no sale imgen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/whatsapp-logo-variant-svgrepo-com.svg" alt="no sale imgen" />
       </a>
       <a>
-        <img src="/PROYECTOSENA/imagenes/footer/envelope.svg" alt="no sale imgen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/envelope.svg" alt="no sale imgen" />
       </a>
       <a>
-        <img src="/PROYECTOSENA/imagenes/footer/position-marker.svg" alt="no sale imagen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/position-marker.svg" alt="no sale imagen" />
       </a href="">
       <a href="mailto:brayanramirez4546@gmail.com">
-        <img src="/PROYECTOSENA/imagenes/footer/vibrating-smartphone.svg" alt="no sale imagen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/vibrating-smartphone.svg" alt="no sale imagen" />
       </a>
     </div>
     <div class="copy">

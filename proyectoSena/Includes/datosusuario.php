@@ -15,7 +15,7 @@
   <!--header-->
   <header id="header" >
     <div class="logo">
-      <a href="/PROYECTOSENA/index.php">
+      <a href="/exchangecity/PROYECTOSENA/index.php">
         <span class="material-symbols-outlined iconoLogo">
           compare_arrows
         </span>
@@ -65,32 +65,32 @@
   <!-- Menu lateral -->
   <nav id="menu">
     <div class="icono">
-      <a class="menuObjeto" href="/PROYECTOSENA/index.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/house.svg" alt="inicio.svg">
+      <a class="menuObjeto" href="/exchangecity/PROYECTOSENA/index.php">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/house.svg" alt="inicio.svg">
         <span>Inicio</span>
       </a>
     </div>
     <div class="icono">
       <a class="menuObjeto" href="televisores.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/tv.svg" alt="televisores.svg">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/tv.svg" alt="televisores.svg">
         <span>TV</span>
       </a>
     </div>
     <div class="icono">
       <a class="menuObjeto" href="movil.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/smartphone.svg" alt="movil.svg">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/smartphone.svg" alt="movil.svg">
         <span>Movil</span>
       </a>
     </div>
     <div class="icono">
       <a class="menuObjeto" href="computadoras.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/pc.svg" alt="computadoras.svg">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/pc.svg" alt="computadoras.svg">
         <span>PC</span>
       </a>
     </div>
     <div class="icono">
       <a class="menuObjeto" href="consolas.php">
-        <img class="menuIcono" src="/PROYECTOSENA/imagenes/Navegacion/svg/console-controller.svg" alt="consolas.svg">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/console-controller.svg" alt="consolas.svg">
         <span> Consolas</span>
       </a>
     </div>
@@ -103,7 +103,7 @@
     <div class="datosConjunto">
         <div class="datos">
             <div class="datoImagen">
-                <img src="/proyectoSena/imagenes/datosusuario/images.jfif" alt="foto"> 
+                <img src="/exchangecity/proyectoSena/imagenes/datosusuario/images.jfif" alt="foto"> 
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Ea in corporis, beatae iure a quia ullam maxime, non provident placeat saepe. 
                     Voluptas ad nobis tempora</p>
@@ -145,16 +145,16 @@
     <h1>Contacto</h1>
     <div class="imgContac">
       <a>
-        <img src="/PROYECTOSENA/imagenes/footer/whatsapp-logo-variant-svgrepo-com.svg" alt="no sale imgen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/whatsapp-logo-variant-svgrepo-com.svg" alt="no sale imgen" />
       </a>
       <a>
-        <img src="/PROYECTOSENA/imagenes/footer/envelope.svg" alt="no sale imgen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/envelope.svg" alt="no sale imgen" />
       </a>
       <a>
-        <img src="/PROYECTOSENA/imagenes/footer/position-marker.svg" alt="no sale imagen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/position-marker.svg" alt="no sale imagen" />
       </a href="">
       <a href="mailto:brayanramirez4546@gmail.com">
-        <img src="/PROYECTOSENA/imagenes/footer/vibrating-smartphone.svg" alt="no sale imagen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/vibrating-smartphone.svg" alt="no sale imagen" />
       </a>
     </div>
     <div class="copy">

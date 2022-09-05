@@ -15,7 +15,7 @@
   <header id="header" >
     
     <div class="logo">
-      <a href="/PROYECTOSENA/index.php">
+      <a href="/exchangecity/PROYECTOSENA/index.php">
         <span class="material-symbols-outlined iconoLogo">
             compare_arrows
         </span>
@@ -32,7 +32,7 @@
   <!-- inicio de secion o login  -->
   
   <div class="acount ">
-    <form class="login" action="/PROYECTOSENA/backend/login.php" method="post">
+    <form class="login" action="/exchangecity/PROYECTOSENA/backend/login.php" method="post">
         <h3>Iniciar Seccion</h3> 
         <label class="labelLogin" for="correo">Correo</label>
         <input  class="inputLogin" type="email" name="correo">
