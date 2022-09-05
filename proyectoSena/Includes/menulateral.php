@@ -1,8 +1,8 @@
 <!-- Menu lateral -->
 <nav id="menu">
     <div class="icono">
-      <a class="menuObjeto" href="/exchangecity//PROYECTOSENA/index.php">
-        <img class="menuIcono" src="/exchangecity//PROYECTOSENA/imagenes/Navegacion/svg/house.svg" alt="inicio.svg">
+      <a class="menuObjeto" href="/exchangecity/PROYECTOSENA/index.php">
+        <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/house.svg" alt="inicio.svg">
         <span>Inicio</span>
       </a>
     </div>

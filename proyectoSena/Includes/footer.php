@@ -6,13 +6,13 @@
         <img src="/exchangecity/PROYECTOSENA/imagenes/footer/whatsapp-logo-variant-svgrepo-com.svg" alt="no sale imgen" />
       </a>
       <a>
-        <img src="/exchangecity//PROYECTOSENA/imagenes/footer/envelope.svg" alt="no sale imgen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/envelope.svg" alt="no sale imgen" />
       </a>
       <a>
-        <img src="/exchangecity//PROYECTOSENA/imagenes/footer/position-marker.svg" alt="no sale imagen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/position-marker.svg" alt="no sale imagen" />
       </a href="">
       <a href="mailto:brayanramirez4546@gmail.com">
-        <img src="/exchangecity//PROYECTOSENA/imagenes/footer/vibrating-smartphone.svg" alt="no sale imagen" />
+        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/vibrating-smartphone.svg" alt="no sale imagen" />
       </a>
     </div>
     <div class="copy">

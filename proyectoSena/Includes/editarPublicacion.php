@@ -5,9 +5,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/PROYECTOSENA/css/estilos_contenido.css">
-    <link rel="stylesheet" href="/PROYECTOSENA/css/publicarProductos.css">
-    <link rel="stylesheet" href="/PROYECTOSENA/css/editarPublicacion.css">
+    <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/index.css">
+    <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/publicarProductos.css">
+    <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/editarPublicacion.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <title>Contenido</title>
 </head>
