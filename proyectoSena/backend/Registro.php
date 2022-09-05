@@ -28,7 +28,8 @@ if(isset($_POST)){
           $error["apellido"]="apellido incorrecto";
      }
 
-     //se validad que el correo no exista en la base de datos  con una consulta 
+     //se validad que el correo no exista en la base de datos  con una consulta
+      
      $consulta_email="SELECT * FROM usuario WHERE usu_correo='$correo'";
      $guardado_email= mysqli_query ($db,$consulta_email);
      $email_existente=mysqli_fetch_assoc($guardado_email);
