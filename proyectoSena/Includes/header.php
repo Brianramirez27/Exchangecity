@@ -45,7 +45,7 @@
    
       <h3>Registro</h3>
       <?php echo isset($_SESSION["error"]["registro_fallo"]) ? "<div>".$_SESSION["error"]["registro_fallo"]."</div>":"";?>
-      <?php echo isset($_SESSION["registro_completo"]) ? "<div>".$_SESSION["error"]["registro_completo"]."</div>":"";?>
+      <?php echo isset($_SESSION["registro_completo"]) ? "<div>".$_SESSION["registro_completo"]."</div>":"";?>
      
       <label class="labelregistro labelLogin" for="nombre">Nombre</label>
       <input  class="inputregistro inputLogin" type="text" name="nombre">
@@ -79,5 +79,6 @@
   <script src="/exchangecity/PROYECTOSENA/js/index.js"></script>
   <?php 
       unset($_SESSION["error"]);
+      unset($_SESSION["registro_completo"]);
   ?>
   <!-- <?php //echo isset($_SESSION["error"]["nombre"]) ? "<div>".$_SESSION["error"]["nombre"]."</div>":"";?> -->
