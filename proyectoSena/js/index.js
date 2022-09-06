@@ -9,21 +9,15 @@ bottom.addEventListener("click",()=>{
 
 
 // js para que cuando selecionen administrador puedan poner el codigo 
-const RegistroCodigo=document.querySelector(".RegistroCodigo")
 const RegistroOpcion=document.querySelector(".RegistroOpcion")
 
-// RegistroOpcion.addEventListener("click",()=>{
-//     RegistroCodigo.style.display="block"
-// });
 
 RegistroOpcion.addEventListener("change", function() {
     if(RegistroOpcion.value =="Administrador"){
-        // console.log(RegistroOpcion.value)
         document.querySelector(".RegistroCodigo").style.display="block"
-        
-        
+    
     }else{
-        // console.log(RegistroOpcion.value)
+        document.querySelector(".RegistroCodigo").style.display="none"
     }
     
 });

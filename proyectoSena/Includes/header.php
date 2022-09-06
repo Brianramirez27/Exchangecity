@@ -41,9 +41,11 @@
         <input type="submit" value="Iniciar Secion">
     </form>
     <form  class="registro login"action="/exchangecity/PROYECTOSENA/backend/Registro.php" method="post">
+
       <h3>Registro</h3>
       <label class="labelregistro labelLogin" for="nombre">Nombre</label>
       <input  class="inputregistro inputLogin" type="text" name="nombre">
+      
       
       <label class="labelregistro labelLogin" for="apellido">Apellido</label>
       <input class="inputregistro inputLogin" type="text" name="apellido">
@@ -52,18 +54,18 @@
       <input class="inputregistro inputLogin" type="email" name="correo">
 
       <label  class="labelregistro labelLogin" for="pasword">Contraseña</label>
-      <input  class="inputregistro inputLogin" labelLogin" type="password" name="password">
+      <input  class="inputregistro inputLogin"  type="password" name="password">
 
       <label  class="labelregistro labelLogin" for="RegiistroOpcion">Tipo de registro</label>
-      <select  class="RegistroOpcion inputLogin"  name =RegistroOpcion>
+      <select  class="RegistroOpcion inputLogin"  name ="RegistroOpcion">
         <option>Usuario</option>
         <option>Administrador</option>
       </select>
 
-      <label class="RegistroCodigo labelLogin" for="RegistroCodigo"></label>
       <input class="RegistroCodigo inputLogin"  type="number" name="RegistroCodigo" placeholder="Codigo de administrador">
       <input  type="submit" value="Registrar">
 
     </form>
+    
   </div> 
   <script src="/exchangecity/PROYECTOSENA/js/index.js"></script>

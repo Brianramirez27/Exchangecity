@@ -10,7 +10,8 @@ if(isset($_POST)){
      $apellido= isset ($_POST["apellido"]) ? $_POST["apellido"]:false;
      $correo=  isset( $_POST["correo"]) ? $_POST["correo"]:false;
      $contraseña= isset ($_POST["password"]) ? $_POST["password"]: false;
-     $opcion= isset ($_POST["RegistroOpcion"]) ? $_POST["RegistroOpcion"]:false;
+     $tipo= isset ($_POST["RegistroOpcion"]) ? $_POST["RegistroOpcion"]:false;
+     $codigo=isset ($_POST["RegistroCodigo"]) ? $_POST["RegistroCodigo"]:false;
 
      /* se crea un array para guardar los errores de validacion de datos */
 
@@ -50,5 +51,47 @@ if(isset($_POST)){
           $error["password"] = "la contraseña esta vacia";
      }
 
+// se valida el tipo de usuario y el codigo 
+     if(!empty($tipo)){     
+          if ($tipo =="Administrador" && $codigo =="2506"){
+              $tipo=1;
+              $codigo=$codigo;
+          }else{
+               
+               $error["codigo"]="el codigo no es correcto";
+          }
+           if($tipo =="Usuario"){
+               $tipo = 2;
+           }
+         
+     }else{
+          $error["tipo"]="el campo esta vacio";
+
+     }
+
+// se comprueba que no exista ningun error antes de guardar los datos en la base de datos 
+     if(count($error)==0){
+     /* si no hay errores Se crifra la contrasena*/ 
+        $password_segura=password_hash($contraseña,PASSWORD_BCRYPT,['cost'=>4]);
+        /* depues de que no halla errores haora si se guardan los datos en bd*/
+        $add_usuario = "INSERT INTO usuario  VALUES(NULL,'$nombre','$apellido','$correo','$password_segura'NULL,$tipo,1,NULL,NULL)"; 
+        $guardar_usurios = mysqli_query($db,$add_usuario);
+
+     /* se  comprueba si el registro es corrrecto o fallo y se crea una secion para mostrarla   */
+     if($guardar_usurios){
+          $_SESSION["registro_completo"] = "el registro se ha completado con exito";
+     }else{
+          $_SESSION["error"]["registro_fallo"] =" el registro  fallo";
+     }
+
+     }else{
+          /*se crea una secion para mostrarle al usuario los los errores si hay */
+          $_SESSION["error"]= $error ;
+          
+      }
+      
+
 }
+/* se redireciona  al index para mostrar los errores o seciones  si hay*/
+header("location: ../index.php");
 ?>

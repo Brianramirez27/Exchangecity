@@ -5,11 +5,12 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
 
 ?>
  
- 
+
  <!--contenido de la pagina o aside-->
   <section id="container">
     <div class="titulo">
       <h1>Productos Publicados</h1>
+      <?php echo  isset($_SESSION["error"]["nombre"])?"<div class='alerta_error'>".$_SESSION["error"]["nombre"]."</div>" :"";?>
     </div>
     <section>
       <div class="cars">
