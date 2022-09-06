@@ -20,7 +20,7 @@ if(isset($_POST)){
           $nombre=$nombre;
 
      }else{
-          $error["nombre"]="Nombre incorrecto";
+          $error["nombre"]="Campo Vacio O Nombre incorrecto";
      }
      if(!empty($apellido) && !is_numeric($apellido) && !preg_match("/[*][_][.]/",$apellido)){
           $apellido=$apellido;
@@ -78,20 +78,21 @@ if(isset($_POST)){
         $guardar_usurios = mysqli_query($db,$add_usuario);
 
      /* se  comprueba si el registro es corrrecto o fallo y se crea una secion para mostrarla   */
-     if($guardar_usurios){
-          $_SESSION["registro_completo"] = "el registro se ha completado con exito";
-     }else{
-          $_SESSION["error"]["registro_fallo"] =" el registro  fallo";
-     }
+      if($guardar_usurios){
+           $_SESSION["registro_completo"] = "el registro se ha completado con exito";
+      }else{
+           $_SESSION["error"]["registro_fallo"] =" el registro  fallo";
+      }
 
-     }else{
-          /*se crea una secion para mostrarle al usuario los los errores si hay */
-          $_SESSION["error"]= $error ;
+      }else{
+           /*se crea una secion para mostrarle al usuario los los errores si hay */
+           $_SESSION["error"]= $error ;
           
       }
       
 
-}
-/* se redireciona  al index para mostrar los errores o seciones  si hay*/
+ }
+
 header("location: ../index.php");
+
 ?>

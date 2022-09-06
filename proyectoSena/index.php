@@ -1,5 +1,5 @@
 <?php 
-
+include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/conexionDB.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
 
@@ -10,9 +10,10 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
   <section id="container">
     <div class="titulo">
       <h1>Productos Publicados</h1>
-      <?php echo  isset($_SESSION["error"]["nombre"])?"<div class='alerta_error'>".$_SESSION["error"]["nombre"]."</div>" :"";?>
+      
     </div>
     <section>
+    
       <div class="cars">
           <h3>Categoria</h3>
           <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
@@ -20,9 +21,9 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
             <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
             <p>especificacion del producto</p>
           </div>
-        
+          
       </div>
-    
+      <?php  isset($_SESSION["error"]["nombre"]) ? "<div class='prueba'>".$_SESSION["error"]["nombre"]."</div>":"";?>
       <!-- paginacion -->
       <div class="contenidoPaginacion">
         <div class="paginas">
@@ -39,7 +40,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
   <!--limpiamos los flotados del aside -->
   <div style="clear: both"></div>
 
-
+ ;
   <?php 
   include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
   
