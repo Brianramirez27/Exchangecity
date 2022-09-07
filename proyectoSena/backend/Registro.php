@@ -62,8 +62,6 @@ if(isset($_POST)){
           }else{
                $error["codigo"]="el codigo no es correcto";
           }
-          
-     
      }
 
 // se comprueba que no exista ningun error antes de guardar los datos en la base de datos 
@@ -87,10 +85,8 @@ if(isset($_POST)){
            $_SESSION["error"]= $error ;
           
       }
-      
-
 }
 
-header("location: ../index.php");
+ header("location: ../index.php");
 
 ?>

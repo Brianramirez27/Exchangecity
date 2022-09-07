@@ -61,7 +61,6 @@
 
       <label  class="labelregistro labelLogin" for="pasword">Contraseña</label>
       <input  class="inputregistro inputLogin"  type="password" name="password">
-      <?php echo isset($_SESSION["error"]["contraseña"]) ? "<div>".$_SESSION["error"]["contraseña"]."</div>":"";?>
 
       <label  class="labelregistro labelLogin" for="RegiistroOpcion">Tipo de registro</label>
       <select  class="RegistroOpcion inputLogin"  name ="RegistroOpcion">
