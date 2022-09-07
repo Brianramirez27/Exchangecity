@@ -32,6 +32,7 @@
   <!-- inicio de secion o login  -->
   
   <div class="acount ">
+   
     <form class="login" action="/exchangecity/PROYECTOSENA/backend/login.php" method="post">
         <h3>Iniciar Seccion</h3> 
         <label class="labelLogin" for="correo">Correo</label>
@@ -41,29 +42,42 @@
         <input type="submit" value="Iniciar Secion">
     </form>
     <form  class="registro login"action="/exchangecity/PROYECTOSENA/backend/Registro.php" method="post">
+   
       <h3>Registro</h3>
+      <?php echo isset($_SESSION["error"]["registro_fallo"]) ? "<div>".$_SESSION["error"]["registro_fallo"]."</div>":"";?>
+      <?php echo isset($_SESSION["registro_completo"]) ? "<div>".$_SESSION["registro_completo"]."</div>":"";?>
+     
       <label class="labelregistro labelLogin" for="nombre">Nombre</label>
       <input  class="inputregistro inputLogin" type="text" name="nombre">
+      <?php echo isset($_SESSION["error"]["nombre"]) ? "<div>".$_SESSION["error"]["nombre"]."</div>":"";?>
       
       <label class="labelregistro labelLogin" for="apellido">Apellido</label>
       <input class="inputregistro inputLogin" type="text" name="apellido">
+      <?php echo isset($_SESSION["error"]["apellido"]) ? "<div>".$_SESSION["error"]["apellido"]."</div>":"";?>
 
       <label class="labelregistro labelLogin" for="Correo">Correo</label>
       <input class="inputregistro inputLogin" type="email" name="correo">
+      <?php echo isset($_SESSION["error"]["correo"]) ? "<div>".$_SESSION["error"]["correo"]."</div>":"";?>
 
       <label  class="labelregistro labelLogin" for="pasword">Contraseña</label>
-      <input  class="inputregistro inputLogin" labelLogin" type="password" name="password">
+      <input  class="inputregistro inputLogin"  type="password" name="password">
 
       <label  class="labelregistro labelLogin" for="RegiistroOpcion">Tipo de registro</label>
-      <select  class="RegistroOpcion inputLogin"  name =RegistroOpcion>
+      <select  class="RegistroOpcion inputLogin"  name ="RegistroOpcion">
         <option>Usuario</option>
         <option>Administrador</option>
       </select>
 
-      <label class="RegistroCodigo labelLogin" for="RegistroCodigo"></label>
       <input class="RegistroCodigo inputLogin"  type="number" name="RegistroCodigo" placeholder="Codigo de administrador">
+      <?php echo isset($_SESSION["error"]["codigo"]) ? "<div>".$_SESSION["error"]["codigo"]."</div>":"";?>
       <input  type="submit" value="Registrar">
 
     </form>
+    
   </div> 
   <script src="/exchangecity/PROYECTOSENA/js/index.js"></script>
+  <?php 
+      unset($_SESSION["error"]);
+      unset($_SESSION["registro_completo"]);
+  ?>
+  <!-- <?php //echo isset($_SESSION["error"]["nombre"]) ? "<div>".$_SESSION["error"]["nombre"]."</div>":"";?> -->

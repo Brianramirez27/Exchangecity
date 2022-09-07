@@ -133,7 +133,7 @@ header{
 
 .login{
 width:30%;
-height:60%;
+height:80%;
 background:linear-gradient(20deg, grey ,black 70% , grey);
 /* background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet); */
 display: flex;
@@ -178,8 +178,15 @@ padding: 1rem;
 }
 
 .RegistroCodigo{
-  display:none;
+  display: none;
 }
+select,option{
+  background:grey;
+}
+::placeholder { color: white }
+
+
+
  /* estilos/navegacion */
 #menu{
   background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
@@ -400,3 +407,7 @@ footer h1 {
   font-size: 1.5rem;
   margin-top: 3rem;
 }
+
+
+.prueba{
+  color: white;}
