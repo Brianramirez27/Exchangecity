@@ -37,8 +37,12 @@
         <h3>Iniciar Seccion</h3> 
         <label class="labelLogin" for="correo">Correo</label>
         <input  class="inputLogin" type="email" name="correo">
+        <?php echo isset($_SESSION["login_erroneo"])  ? "<div>" . $_SESSION["login_erroneo"] . "</div>":"";    ?>
         <label class="labelLogin" for="pasword">Contraseña</label>
         <input class="inputLogin" type="password" name="password">
+        <?php echo isset($_SESSION["contrasena_erronea"])  ? "<div>". $_SESSION["contrasena_erronea"] ."</div>":"";  ?>
+        <?php echo isset($_SESSION["campo_vacio"])  ? "<div>". $_SESSION["campo_vacio"] ."</div>":"";  ?>
+
         <input type="submit" value="Iniciar Secion">
     </form>
     <form  class="registro login"action="/exchangecity/PROYECTOSENA/backend/Registro.php" method="post">
@@ -76,8 +80,16 @@
     
   </div> 
   <script src="/exchangecity/PROYECTOSENA/js/index.js"></script>
+
   <?php 
+  /*sesisones del registro */
       unset($_SESSION["error"]);
       unset($_SESSION["registro_completo"]);
+
+  /*sesiones del login */
+      unset($_SESSION["login_erroneo"]);
+      unset($_SESSION["contrasena_erronea"]);
   ?>
-  <!-- <?php //echo isset($_SESSION["error"]["nombre"]) ? "<div>".$_SESSION["error"]["nombre"]."</div>":"";?> -->
+
+
+
