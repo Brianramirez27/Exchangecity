@@ -17,33 +17,32 @@
    /*si el correo existe entramos a verificar la password */
    if(isset($datos_usuario)){
 
-       $verifi_password=$datos_usuario["usu_password"];
-       var_dump($datos_usuario);
-        if(!empty($contraseña)){
-            echo "campo diligenciado";
-        
-            if( $verifi_password==$contraseña){
+       $verifi_password=password_verify($contraseña, $datos_usuario["usu_password"]);
+       
+    
+    /*verificamos que la coontraseña que ingreso este guardada */
+        if( $contraseña==$verifi_password){
 
-                $_SESSION["login_correcto"]=$datos_usuario;
+            $_SESSION["login_correcto"]=$datos_usuario;
 
-                }else{
-                    $_SESSION["contrasena_erronea"]="contraseña incorrecta o campo vacio";
-                }
         }else{
-            
-         echo   $_SESSION["campo_vacio"]="contraseña vacia";
+            $_SESSION["contrasena_erronea"]="contraseña incorrecta ";
+        }
 
-        }    
     }else{
        $_SESSION["login_erroneo"]="correo no registrado o campo vacio";
    }
-
- 
+   /*se comprueba que el campo contraseña que no sea vacio */
+   if(!empty($contraseña)){
+    $contraseña=$contraseña;
+    }else{
+        $_SESSION["password"] = "la contraseña esta vacia";
+    }
     
-
-   
 
 
 }
+
+    
   
 ?>
