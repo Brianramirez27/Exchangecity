@@ -23,7 +23,19 @@
       <h1>Exchange City</h1>
     </div>
     <div class="iniciarSeccion">
-      <input class="buscador" type="text" value="Buscar"/>  
+      <input class="buscador" type="text" value="Buscar"/> 
+      <?php  if(isset($_SESSION["login_correcto"])):?>
+          <div>
+              <h3>Bienvenido <?php echo $_SESSION["login_correcto"]["usu_nombre"] ." ".$_SESSION["login_correcto"]["usu_apellido"]?></h3>
+
+
+
+          </div>
+      
+      
+
+
+      <?php endif; ?>
       <button class="bottom" href="">
         <span class="material-symbols-outlined iconoLogin ">account_circle</span>
       </button>
@@ -37,8 +49,13 @@
         <h3>Iniciar Seccion</h3> 
         <label class="labelLogin" for="correo">Correo</label>
         <input  class="inputLogin" type="email" name="correo">
+        <?php echo isset($_SESSION["login_erroneo"])  ? "<div>" . $_SESSION["login_erroneo"] . "</div>":"";    ?>
         <label class="labelLogin" for="pasword">Contraseña</label>
         <input class="inputLogin" type="password" name="password">
+        <?php echo isset($_SESSION["password"])  ? "<div>". $_SESSION["password"] ."</div>":"";  ?>
+        <?php echo isset($_SESSION["contrasena_erronea"])  ? "<div>". $_SESSION["contrasena_erronea"] ."</div>":"";  ?>
+      
+
         <input type="submit" value="Iniciar Secion">
     </form>
     <form  class="registro login"action="/exchangecity/PROYECTOSENA/backend/Registro.php" method="post">
@@ -76,8 +93,18 @@
     
   </div> 
   <script src="/exchangecity/PROYECTOSENA/js/index.js"></script>
+
   <?php 
+  /*sesisones del registro */
       unset($_SESSION["error"]);
       unset($_SESSION["registro_completo"]);
+
+  /*sesiones del login */
+      unset($_SESSION["login_erroneo"]);
+      unset($_SESSION["contrasena_erronea"]);
+      unset($_SESSION["password"]);
+      unset($_SESSION["login_correcto"]);
   ?>
-  <!-- <?php //echo isset($_SESSION["error"]["nombre"]) ? "<div>".$_SESSION["error"]["nombre"]."</div>":"";?> -->
+
+
+
