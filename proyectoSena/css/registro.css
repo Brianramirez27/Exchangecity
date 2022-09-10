@@ -1,0 +1,11 @@
+
+  .RegistroCodigo{
+    display: none;
+  }
+  select,option{
+    background:grey;
+  }
+  ::placeholder { color: white }
+  
+  
+  

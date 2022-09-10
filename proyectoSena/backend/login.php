@@ -39,10 +39,9 @@
         $_SESSION["password"] = "la contraseña esta vacia";
     }
     
-
-
 }
 
-    
+header("location: /exchangecity/proyectoSena/includes/login.php");
+
   
 ?>
