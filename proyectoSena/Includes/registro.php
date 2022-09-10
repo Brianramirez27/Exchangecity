@@ -10,23 +10,25 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
     <form  class="registro login"action="/exchangecity/PROYECTOSENA/backend/Registro.php" method="POST">
     
     <h3>Registro</h3>
-    <?php echo isset($_SESSION["error"]["registro_fallo"]) ? "<div>".$_SESSION["error"]["registro_fallo"]."</div>":"";?>
-    <?php echo isset($_SESSION["registro_completo"]) ? "<div>".$_SESSION["registro_completo"]."</div>":"";?>
+    <?php echo isset($_SESSION["registro_fallo"]) ? "<div>".$_SESSION["registro_fallo"]."</div>":"";?>
+    <?php echo isset($_SESSION["registro_completado"]) ? "<div>".$_SESSION["registro_completado"]."</div>":"";?>
     
     <label class="labelregistro labelLogin" for="nombre">Nombre</label>
     <input  class="inputregistro inputLogin" type="text" name="nombre">
-    <?php echo isset($_SESSION["error"]["nombre"]) ? "<div>".$_SESSION["error"]["nombre"]."</div>":"";?>
+    <?php echo isset($_SESSION["nombre"]) ? "<div>".$_SESSION["nombre"]."</div>":"";?>
     
     <label class="labelregistro labelLogin" for="apellido">Apellido</label>
     <input class="inputregistro inputLogin" type="text" name="apellido">
-    <?php echo isset($_SESSION["error"]["apellido"]) ? "<div>".$_SESSION["error"]["apellido"]."</div>":"";?>
+    <?php echo isset($_SESSION["apellido"]) ? "<div>".$_SESSION["apellido"]."</div>":"";?>
 
     <label class="labelregistro labelLogin" for="Correo">Correo</label>
     <input class="inputregistro inputLogin" type="email" name="correo">
-    <?php echo isset($_SESSION["error"]["correo"]) ? "<div>".$_SESSION["error"]["correo"]."</div>":"";?>
+    <?php echo isset($_SESSION["correo"]) ? "<div>".$_SESSION["correo"]."</div>":"";?>
 
     <label  class="labelregistro labelLogin" for="pasword">Contraseña</label>
     <input  class="inputregistro inputLogin"  type="password" name="password">
+    <?php echo isset($_SESSION["contraseña"]) ? "<div>".$_SESSION["contraseña"]."</div>":"";?>
+
 
     <label  class="labelregistro labelLogin" for="RegiistroOpcion">Tipo de registro</label>
     <select  class="RegistroOpcion inputLogin"  name ="RegistroOpcion">
@@ -50,4 +52,19 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
    <?php 
   include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
   
+  ?>
+
+<?php 
+  /*sesisones del registro */
+      unset($_SESSION["nombre"]);
+      unset($_SESSION["apellido"]);
+      unset($_SESSION["correo"]);
+      unset($_SESSION["contraseña"]);
+      unset($_SESSION["registro_completado"]);
+
+  /*sesiones del login */
+      unset($_SESSION["login_erroneo"]);
+      unset($_SESSION["contrasena_erronea"]);
+      unset($_SESSION["password"]);
+      unset($_SESSION["login_correcto"]);
   ?>

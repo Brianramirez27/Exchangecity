@@ -14,19 +14,29 @@ if(isset($_POST)){
      $codigo=isset ($_POST["RegistroCodigo"]) ? $_POST["RegistroCodigo"]:false;
 
      /* se crea un array para guardar los errores de validacion de datos */
-     $error=array();
+     $error=0;
      /* se validan los datos de los nombres y apellidos */
      if(!empty($nombre) && !is_numeric($nombre) && !preg_match("/[*][.][0-9]/",$nombre)){
           $nombre=$nombre;
 
      }else{
-          $error["nombre"]="Campo Vacio o nombre incorrecto";
+          $error+=1;
+          $_SESSION['nombre']="Campo vacio o nombre incorrecto";
      }
      if(!empty($apellido) && !is_numeric($apellido) && !preg_match("/[*][_][.]/",$apellido)){
           $apellido=$apellido;
 
      }else{
-          $error["apellido"]="Apellido incorrecto";
+          $error+=1;
+          $_SESSION["apellido"]="Campo vacio o apellido incorrecto";
+     }
+     // se valida que la contraseña no este vacia
+     if(!empty($contraseña)){
+          $contraseña=$contraseña;
+
+     }else{
+          $error+=1;
+          $_SESSION["contraseña"]="la contraseña esta vacia";
      }
 
      //se validad que el correo no exista en la base de datos  con una consulta 
@@ -39,17 +49,22 @@ if(isset($_POST)){
           if(!empty($correo) && filter_var($correo,FILTER_VALIDATE_EMAIL)){
           $correo=$correo;
           }else{
-               $error["correo"]="Correo vacio";
+               $error+=1;
+               $_SESSION["correo"]="Correo vacio";
+              
           }
      }else{
-          $error["correo"]="El correo ya esta registrado";
+          $error+=1;
+          $_SESSION["correo"]="El correo ya esta registrado";
+          
      }
 
      /*validacion de la password */
      if(!empty($contraseña)){
           $contraseña=$contraseña;
      }else{
-          $error["password"] = "La contraseña esta vacia";
+          $error+=1;
+          $_SESSION["password"] = "La contraseña esta vacia";
      }
 
 // se valida el tipo de usuario y el codigo 
@@ -60,12 +75,13 @@ if(isset($_POST)){
           }elseif($tipo =="Usuario"){
                $tipo = 2;      
           }else{
-               $error["codigo"]="el codigo no es correcto";
+               $error+=1;
+               $_SESSION["codigo"]="el codigo no es correcto";
           }
      }
 
 // se comprueba que no exista ningun error antes de guardar los datos en la base de datos 
-     if(count($error)==0){
+     if($error==0){
      /* si no hay errores Se crifra la contrasena*/ 
         $password_segura=password_hash("$contraseña",PASSWORD_BCRYPT,['cost'=>4]);
         /* depues de que no halla errores a hora si se guardan los datos en bd*/
@@ -74,9 +90,9 @@ if(isset($_POST)){
 
      /* se  comprueba si el registro es corrrecto o fallo y se crea una secion para mostrarla   */
       if($guardar_usurios){
-           $_SESSION["registro_completo"] = "el registro se ha completado con exito";
+           $_SESSION["registro_completado"] = "el registro se ha completado con exito";
       }else{
-           $_SESSION["error"]["registro_fallo"] =" el registro  fallo";
+           $_SESSION["registro_fallo"] =" el registro  fallo";
            
       }
 
@@ -85,8 +101,9 @@ if(isset($_POST)){
            $_SESSION["error"]= $error ;
           
       }
+ header("location: /exchangecity/proyectoSena/includes/registro.php");
 }
 
- header("location: /exchangecity/proyectoSena/includes/registro.php");
+ 
 
 ?>
