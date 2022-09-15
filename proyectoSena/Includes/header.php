@@ -9,6 +9,7 @@
   <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/index.css">
   <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/login.css">
   <link rel="stylesheet" href="/exchangecity/PROYECTOSENA/css/registro.css">
+  <link rel="stylesheet" href="/exchangecity/proyectoSena/css//datosusuario.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
   <title>Contenido</title>
 </head>
@@ -50,12 +51,13 @@
   /*sesisones del registro */
       unset($_SESSION["error"]);
       unset($_SESSION["registro_completo"]);
+      unset($_SESSION["registro_fallo"]);
 
   /*sesiones del login */
       unset($_SESSION["login_erroneo"]);
       unset($_SESSION["contrasena_erronea"]);
       unset($_SESSION["password"]);
-      unset($_SESSION["login_correcto"]);
+      //unset($_SESSION["login_correcto"]);
   ?>
 
 
