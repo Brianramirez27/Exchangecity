@@ -31,17 +31,15 @@
       <?php  if(isset($_SESSION["login_correcto"])):?>
           <div>
               <h3>Bienvenido <?php echo $_SESSION["login_correcto"]["usu_nombre"] ." ".$_SESSION["login_correcto"]["usu_apellido"]?></h3>
-
-
-
           </div>
-      
-      
-
-
       <?php endif; ?>
-      <a href="/exchangecity/proyectoSena/Includes/login.php">Login</a>
-      <a href="/exchangecity/proyectoSena/Includes/registro.php">Registrarse</a>
+
+      <?php if(!isset($_SESSION["login_correcto"])): ?> 
+        <div class="registro_iniciar">
+          <a class="inicioSesion" href="/exchangecity/proyectoSena/Includes/login.php">Login</a>
+          <a  class="registroUsuario" href="/exchangecity/proyectoSena/Includes/registro.php">Registrarse</a>
+        </div>
+      <?php endif; ?>
     </div>
   </header>
 

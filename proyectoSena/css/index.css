@@ -8,18 +8,27 @@
 
 /* estilos del body */
 body{
-  background:linear-gradient(20deg, grey ,black 70% , grey);
+  background-image: url("/exchangecity/proyectoSena/imagenes/conteiner/ciudad.jpg");
+  
   /*background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);*/
   
 }
 body a{
   color: white;
 }
+:root{
+  --main-principal: grey ;
+  --main-principal2: black;
+  --main-secundario: yellow;
+  --main-terciario: yellow;
+  --bg:linear-gradient(top right,grey,bl);
+
+}
 /*estilos header*/
 header{
   position: fixed;
   z-index: 2;
-  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+ background-color: #1d2570;
   width: 100%;
   height: 3rem;
   display: flex;
@@ -86,19 +95,19 @@ header{
 
 }
 
-.iniciarSeccion button{
+/* .iniciarSeccion button{
   width:3rem;
   height: 100%;
   background-color: transparent;
   border: 0;
-}
-.iniciarSeccion span {
+} */
+/* .iniciarSeccion span {
   font-size: 2rem;
   width: 3rem;
   height: 100%;
   color: white;
-}
-
+} */
+/* 
 .iniciarSeccion  span{
   width: 3rem;
   height: 100%;
@@ -106,16 +115,26 @@ header{
   justify-content: center;
   align-items: center;
   
-}
-.iconoLogin:hover{
+} */
+/* .iconoLogin:hover{
   background:linear-gradient(20deg, grey ,black 70% , grey);
   
+} */
+.registro_iniciar{
+  margin: 0.5rem;
+  display: flex;
+  gap: 2rem;
+}
+.registro_iniciar a{
+  color: aqua;
+  text-decoration: none;
 }
 
  /* estilos/navegacion */
 #menu{
-  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+  /* background-color: #1d2570; */
   /*background-color: rgba(0, 0, 0, .4);*/
+  /* background-color: #2f3237; */
   position:fixed;
   z-index: 4;
   display: flex;
@@ -193,15 +212,19 @@ section{
   justify-content: center;
   flex-wrap: wrap;
   
+
+  
 }
 .cars {
   width: 150px;
   height: 280px;
   overflow: hidden;
   margin: 0.3rem;
-  border:2px solid #750a45;
+  border:2px solid #1d2570;;
   border-radius: 2rem 0.5rem 2rem;
-  box-shadow: 0.3rem 0.3rem 0.3rem #750a45;
+  box-shadow: 0.3rem 0.3rem 0.3rem  #1d2570;
+  background-color: #1d2570;
+  
   
   
 }
@@ -214,7 +237,7 @@ section{
   font-size: 0.8rem;
   display: inline-flex;
   padding: 0.1rem;
-  color: white;
+  color:white;
   background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
   /*background: linear-gradient(20deg, blueviolet ,black);*/
   float: right;
@@ -235,7 +258,7 @@ height: 70%;
   flex-direction: column;
   text-align: left;
   padding: 0.5rem;
-  color: white;
+  /* color: white; */
   
 }
 .conterCars a h2:hover{
@@ -250,7 +273,7 @@ height: 70%;
   border: 0.2rem solid #750a45 ; ;
   border-radius: 1rem 1rem 1rem ;
   box-shadow: 0.5rem 0.5rem 0.5rem rgb(7, 3, 3);
-  color: white;
+  /* color: white; */
   
  
 }
@@ -261,6 +284,7 @@ height: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+  color: black;
 }
 .paginas{
   padding: 0.5rem;
@@ -279,7 +303,7 @@ height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color:white;
+  color:rgb(0, 0, 0);
   text-decoration: none;
 
 }
@@ -297,8 +321,7 @@ height: 70%;
   float: right;
   margin-top: 2rem;
   border-top: 0.2rem solid white;
-  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
-  
+  background-color: #1d2570;
 }
 
 footer h1 {
