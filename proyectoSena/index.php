@@ -10,7 +10,6 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
   <section id="container">
     <div class="titulo">
       <h1>Productos Publicados</h1>
-      
     </div>
     <section>
     
@@ -144,7 +143,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
   <!--limpiamos los flotados del aside -->
   <div style="clear: both"></div>
 
- ;
+ 
   <?php 
   include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
   
