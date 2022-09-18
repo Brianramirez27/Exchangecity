@@ -1,7 +1,4 @@
-#container{
-    display: flex;
-    flex-direction: column;
-}
+
 /* erreda de los estilos de titulo */
 
 .tituloPublicados h1{
@@ -33,7 +30,7 @@
 .carsBottom{
     width: 150px;
 }
-.publicarProductos{
+.editarPublicacion{
     background: linear-gradient(20deg ,black 40% , grey,black );
     margin: 2rem;
     display:none;

@@ -6,7 +6,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
 ?>
 
   
-<link rel="stylesheet" href="/exchangecity/proyectoSena/css/editarPublicacion.css">
+
  <!--contenido de la pagina o aside-->
   <section id="container">
   <div class="titulo">
@@ -26,7 +26,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
                 <button class="editar">Editar</button>
             </div>
         </div>    
-        <form class="editar" action="/PROYECTOSENA/backend/publicacionEditar.php" method="POST">
+        <form class="editarPublicacion publicarProductos" action="/PROYECTOSENA/backend/publicacionEditar.php" method="POST">
             <div class="tituloPublicar">
                 <h1>Actualiazar Producto</h1>
                 <p class="cerrarPublicarProductos">x</p>

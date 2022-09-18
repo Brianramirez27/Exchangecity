@@ -5,7 +5,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
 
 ?>
  
- <link rel="stylesheet" href="/exchangecity/proyectoSena/css/publicarProductos.css">
+
  <!--contenido de la pagina o aside-->
   <section id="container">
     
