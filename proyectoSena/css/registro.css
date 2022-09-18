@@ -1,11 +1,12 @@
 
   .RegistroCodigo{
     display: none;
+    color: black;
   }
   select,option{
-    background:grey;
+    background:white;
   }
-  ::placeholder { color: white }
+  ::placeholder {color: black;}
   
   
   

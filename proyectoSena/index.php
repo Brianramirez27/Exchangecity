@@ -10,7 +10,6 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
   <section id="container">
     <div class="titulo">
       <h1>Productos Publicados</h1>
-      
     </div>
     <section>
     
@@ -21,8 +20,112 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
             <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
             <p>especificacion del producto</p>
           </div>
-          
       </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      <div class="cars">
+          <h3>Categoria</h3>
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <div class="conterCars">
+            <a href="/PROYECTOSENA/paginas/descricion.php"><h2>producto</h2></a>
+            <p>especificacion del producto</p>
+          </div>
+      </div>
+      
       <?php  isset($_SESSION["error"]["nombre"]) ? "<div class='prueba'>".$_SESSION["error"]["nombre"]."</div>":"";?>
       <!-- paginacion -->
       <div class="contenidoPaginacion">
@@ -40,7 +143,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
   <!--limpiamos los flotados del aside -->
   <div style="clear: both"></div>
 
- ;
+ 
   <?php 
   include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
   

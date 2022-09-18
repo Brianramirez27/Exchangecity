@@ -2,9 +2,7 @@
  <footer id="footer">
     <h1>Contacto</h1>
     <div class="imgContac">
-      <a>
-        <img src="/exchangecity/PROYECTOSENA/imagenes/footer/whatsapp-logo-variant-svgrepo-com.svg" alt="no sale imgen" />
-      </a>
+     
       <a>
         <img src="/exchangecity/PROYECTOSENA/imagenes/footer/envelope.svg" alt="no sale imgen" />
       </a>

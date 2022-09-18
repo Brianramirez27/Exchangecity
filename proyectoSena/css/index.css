@@ -8,23 +8,28 @@
 
 /* estilos del body */
 body{
-  background:linear-gradient(20deg, grey ,black 70% , grey);
-  /*background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);*/
+
+  background-color: #181c1f;
   
 }
 body a{
   color: white;
 }
+:root{
+  --letra: #b4b4b4;
+  --logo:#10d078;
+  --cars:#323a40;
+
+}
 /*estilos header*/
 header{
   position: fixed;
   z-index: 2;
-  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
-  width: 100%;
+  width: 95%;
+  margin-left: 5%;
   height: 3rem;
   display: flex;
   flex-direction: row;
-  
  
 }
 .logo{
@@ -47,7 +52,7 @@ header{
   display: flex;
   justify-content: center;
   align-items: center;
-  border-right: 0.03rem solid white;
+  
   display: flex;
   justify-content: center;
   text-decoration: none;
@@ -55,19 +60,12 @@ header{
 .iconoLogo{
   width: 2rem;
   height: 2rem;
-  color: white;
+  color: var(--logo);
   border: 2px solid white;
   border-radius: 1rem 0.3rem 1rem;
   
 }
-
-
-.logo h1{
-  display: block;
-  color: white;
-}
-
-.iniciarSeccion{
+.iniciarSesion{
   width: 100%;
   height: 100%;
   display: flex;
@@ -75,47 +73,40 @@ header{
   justify-content: right;
   align-items: center;
   gap: 10rem;
+  margin-right: 10rem;
   
 }
-.iniciarSeccion  .buscador {
+.iniciarSesion h3{
+  color: white;
+  border-bottom: 0.1rem solid var(--logo);
+}
+.iniciarSesion  .buscador {
   width: 20rem;
   height: 1.5rem;
   border: 0;
-  border-bottom: 1px solid white;
+  border-bottom: 1px solid var(--logo);
   background: inherit;
-
-}
-
-.iniciarSeccion button{
-  width:3rem;
-  height: 100%;
-  background-color: transparent;
-  border: 0;
-}
-.iniciarSeccion span {
-  font-size: 2rem;
-  width: 3rem;
-  height: 100%;
   color: white;
+
 }
 
-.iniciarSeccion  span{
-  width: 3rem;
-  height: 100%;
+.registro_iniciar{
+  width: 20%;
+  
   display: flex;
-  justify-content: center;
-  align-items: center;
-  
+  gap: 3rem;
 }
-.iconoLogin:hover{
-  background:linear-gradient(20deg, grey ,black 70% , grey);
-  
+.registro_iniciar a{
+  color: var(--letra);
+  text-decoration: none;
+}
+.registro_iniciar a:hover{
+  color: white;
 }
 
  /* estilos/navegacion */
 #menu{
-  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
-  /*background-color: rgba(0, 0, 0, .4);*/
+
   position:fixed;
   z-index: 4;
   display: flex;
@@ -123,20 +114,22 @@ header{
   align-items: center;
   height: 100%;
   width: 5%;
-  top: 3rem;
   overflow: hidden;
   gap: 2rem;
+  border-right:  0.03rem solid var(--logo);
+  padding-top: 1rem;
 }
 .icono{
   width: auto;
   height: auto;
   padding: 0.2rem;
-  border: 2px solid white;
+  border: 2px solid var(--letra);
   border-radius: 1rem 0.3rem 1rem;
   flex-wrap: wrap;
   display: flex;
   justify-content: center;
   overflow: hidden;
+  
 }
 
 .menuIcono{
@@ -146,13 +139,14 @@ header{
   width: 2rem;
   height: 2rem;
   text-align: center;
+
 }
 
 .icono a{
   height: auto;
   text-decoration: none;
   font-weight: bold;
-  color: white;
+
   display: flex;
   text-align: center;
   flex-direction: column;
@@ -163,17 +157,25 @@ header{
   font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
   font-size: 0.8rem;
   
-  
 }
-.icono:hover{
-  background:linear-gradient(20deg, grey ,black 70% , grey);
-  /*background: linear-gradient(20deg, blueviolet ,black);*/
 
-}
 .menuIcono:hover{
   width: 2.5rem;
   height: 2.5rem;
+ 
 }
+.opcion{
+  /* width: 70%;
+  height: 1rem;
+  border-radius: 6rem 6rem 6rem;
+  background-color: white;
+  position: absolute;
+  bottom: 2rem;
+  z-index: 5; */
+color: white;
+
+}
+
 
 
 /* estilos de aside o conteiner */
@@ -186,12 +188,33 @@ header{
   margin-top: 5rem;
 }
 
+.titulo{
+  width: 17rem;
+  display:inline-flex;
+  margin: auto;
+  padding: 10px;
+  border: 0.2rem solid var(--letra) ;
+  border-radius: 1rem 1rem 1rem ;
+  box-shadow: 0.5rem 0.5rem 0.5rem rgb(7, 3, 3);
+  color:white;
+
+  
+}
+.titulo h1{
+  margin: auto;
+}
+
 section{
-  width: 100% ;
+  margin: auto;
+  width: 90% ;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 2rem;
+  
+  
+
   
 }
 .cars {
@@ -199,9 +222,11 @@ section{
   height: 280px;
   overflow: hidden;
   margin: 0.3rem;
-  border:2px solid #750a45;
+  border:2px solid var(--letra);
   border-radius: 2rem 0.5rem 2rem;
-  box-shadow: 0.3rem 0.3rem 0.3rem #750a45;
+  box-shadow: 0.3rem 0.3rem 0.3rem  var(--letra);
+  background-color:  var(--cars);
+  color: var(--letra);
   
   
 }
@@ -214,8 +239,8 @@ section{
   font-size: 0.8rem;
   display: inline-flex;
   padding: 0.1rem;
-  color: white;
-  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+  color:var(--letra);
+  background-color: #181c1f;;
   /*background: linear-gradient(20deg, blueviolet ,black);*/
   float: right;
   
@@ -235,25 +260,15 @@ height: 70%;
   flex-direction: column;
   text-align: left;
   padding: 0.5rem;
-  color: white;
+  /* color: white; */
   
 }
 .conterCars a h2:hover{
   font-size: 1.6rem;
-  color:blueviolet ;
+  color:var(--logo);
   
 }
-.titulo{
-  display:inline-flex;
-  margin: 0.5rem;
-  padding: 10px;
-  border: 0.2rem solid #750a45 ; ;
-  border-radius: 1rem 1rem 1rem ;
-  box-shadow: 0.5rem 0.5rem 0.5rem rgb(7, 3, 3);
-  color: white;
-  
- 
-}
+
 /* estilos de l paginacion */
 .contenidoPaginacion{
   width: 100%;
@@ -261,10 +276,11 @@ height: 70%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+
 }
 .paginas{
   padding: 0.5rem;
-  border: 0.2rem solid #750a45 ;
+  border: 0.2rem solid var(--letra);
   border-radius: 1rem 1rem 1rem;
   display: flex;
   flex-direction: row;
@@ -279,12 +295,12 @@ height: 70%;
   display: flex;
   justify-content: center;
   align-items: center;
-  color:white;
+  color:rgb(0, 0, 0);
   text-decoration: none;
 
 }
 .pagi:hover{
-  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
+  font-size: medium;
 }
 .index{
   width: 7rem;
@@ -296,9 +312,8 @@ height: 70%;
   height: auto;
   float: right;
   margin-top: 2rem;
-  border-top: 0.2rem solid white;
-  background:linear-gradient(20deg, blueviolet ,#750a45 70% , blueviolet);
-  
+  border-top: 0.1rem solid var(--logo);
+  background-color: #20262a;
 }
 
 footer h1 {
@@ -320,14 +335,18 @@ footer h1 {
   border-radius: 1.5rem 0.5rem 1.5rem;
   box-shadow: 0.5rem 0.5rem 0.5rem black;
   padding: 0.7rem;
+  color: white;
 }
 .imgContac img:hover{
   background:linear-gradient(20deg, grey ,black 70% , grey);
 }
+#WhatsApp{
+  color: white;
+}
 .copy {
   display:flex ;
   justify-content: center;
-  color: white;
+  color: var(--logo);
   width: 100%;
   font-size: 1.5rem;
   margin-top: 3rem;
