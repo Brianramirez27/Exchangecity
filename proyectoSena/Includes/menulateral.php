@@ -29,7 +29,12 @@
         <img class="menuIcono" src="/exchangecity//PROYECTOSENA/imagenes/Navegacion/svg/console-controller.svg" alt="consolas.svg">
         <span> Consolas</span>
       </a>
+    
     </div>
-      
-        
+
+    <div class="acount_button icono">
+      <button class="bottom menuObjeto"><img class="menuIcono" src="/Exchangecity\proyectoSena\imagenes\datosusuario\people_outline_white_24dp.svg" alt="">
+      </button>
+    </div>
+    
   </nav>

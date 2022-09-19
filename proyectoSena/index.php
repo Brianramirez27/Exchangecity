@@ -138,6 +138,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
           <a class="pagi"href="/PROYECTOSENA/paginacion/paginacion5.php">5</a>
       </div>
     </div>
+  <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
     </section>
   </section>
   <!--limpiamos los flotados del aside -->
