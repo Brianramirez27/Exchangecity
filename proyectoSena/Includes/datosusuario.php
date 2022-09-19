@@ -15,7 +15,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
       <div class="datosConjunto">
           <div class="datos">
               <div class="datoImagen">
-                  <img src="/exchangecity/proyectoSena/imagenes/conteiner/ciudad.jpg" alt="foto" > 
+                  <img src="data:image/JPG;base64,<?php echo base64_encode($_SESSION["login_correcto"]["usu_img_perfil"]);?>" /> 
                   <input type="file" placeholder="Foto de perfil" name="imagenPerfil">
                   <textarea class="datosDes" name="descripcion" id="" cols="30" rows="10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta placeat hic, natus eius,
                      sint amet esse repellat officiis facilis odit laudantium sed possimus! Minima asperiores voluptatum odio ullam! Minima, sint.</textarea>
