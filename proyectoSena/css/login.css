@@ -14,23 +14,29 @@
   padding: 1rem;
   border-radius: 2rem 2rem 2rem;
   background-image: url("/exchangecity/proyectoSena/imagenes/conteiner/blanca.jpg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  
   
   }
+  
   .login h3{
     display: flex;
     justify-content: center;
+    color: white;
   
   }
  form .inputLogin{
     width:80%;
     height: 1.5rem;
     border: 0;
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid white;
     background-color:transparent;
-    color: black;
+    color: white;
   }
   .login .labelLogin{
-    color: black;
+    color: white;
     text-decoration: none;
     font-size: 1rem;
     width: 100%;
