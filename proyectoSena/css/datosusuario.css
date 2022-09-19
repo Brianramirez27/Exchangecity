@@ -1,12 +1,16 @@
+:root{
+    --letra: #b4b4b4;
+    --logo:#10d078;
+    --cars:#323a40;
+  
+  }
 .datosConjunto{
-    width: 90%;
-   border: 2px;
-   border: 0.2rem solid #750a45;
-   border-radius: 2rem  2rem 2rem;
+    width: 100%;
+    border: 2px;
+    border: 0.2rem solid var(--logo);
+    border-radius: 2rem  2rem 2rem;
     gap: 0.5rem;
     padding: 1rem;
-   
-    
 }
 
 .datos{
@@ -15,8 +19,6 @@
     display: flex;
     flex-direction: row;
     color: white;
-   
-
 }
 .datoImagen{
     display: flex;
@@ -29,7 +31,6 @@
     gap: 1rem;
     font-size: small;
     padding: 0.2rem;
-    
 }
 .datoImagen img{
     width: 12rem;
@@ -39,42 +40,46 @@
     display: flex;
     justify-content:center;
     align-items: center;
-  
     border-radius:7rem 7rem 7rem;
+    margin: 1rem;
 }
 .datosGenerales {
     width: 70%;
     display: flex;
     flex-direction: column;
-   align-items: flex-start;
-   gap: 0.6rem;
-   overflow: hidden;
+    align-items: flex-start;
+    gap: 0.6rem;
+    overflow: hidden;
+    
+  
 }
 
 .datosPersonales{
     width: 90%;
-    border: 2px solid white;
+    border: 2px solid var(--logo);
     padding: 1rem;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    
 }
 
-.datosPersonales p{
+.datosPersonales label{
     display: flex;
     justify-content: flex-start;
 }
 .datosPreguntas{
-   color: blueviolet;
+   color:var(--letra);
 }
 
 
 .datosPagina{
     width: 90%;
     padding: 1rem;
-    border:2px solid white ;
+    border: 0.2rem solid var(--logo);
+    
 }
-.datosPagina p{
+.datosPagina label{
     display: flex;
     justify-content: flex-start;
 }
@@ -83,9 +88,36 @@
 .datosContacto{
     width: 90%;
     padding: 1rem;
-    border: 2px solid white;
+    border: 0.2rem solid var(--logo);
 }
-.datosContacto p{
+.datosContacto label,input,select{
     display: flex;
     justify-content: flex-start;
+    
+}
+select,
+option {
+    background-color: var(--cars);
+
+}
+
+.datosGenerales .inputDatos{
+    color: white;
+    border-bottom:1px solid white ;
+   
+}
+
+
+.actualizarDatos{
+    width:100%;
+    display: flex;
+   margin: auto;
+}
+.actualizarDatos input[type="submit"]{
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-radius: 1rem 1rem 1rem;
+    background: linear-gradient(20deg ,black 40% , grey,black );
 }

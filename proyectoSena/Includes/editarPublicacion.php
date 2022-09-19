@@ -49,6 +49,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
             <input  class="buttomProducto" type="submit" value="Eliminar Publicacion">
         </form>
         <script src="/exchangecity/PROYECTOSENA/js/editarPublicacion.js"></script>
+        <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
     </section>
   </section>
   <!--limpiamos los flotados del aside -->

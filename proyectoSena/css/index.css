@@ -23,7 +23,7 @@ body a{
 }
 /*estilos header*/
 header{
-  position: fixed;
+  position: absolute;
   z-index: 2;
   width: 95%;
   margin-left: 5%;
@@ -72,13 +72,22 @@ header{
   flex-direction: row;
   justify-content: right;
   align-items: center;
-  gap: 10rem;
-  margin-right: 10rem;
+  gap: 8rem;
+  margin-right: 7rem;
   
+}
+.bienvenido{
+  width: 18rem;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+
 }
 .iniciarSesion h3{
   color: white;
   border-bottom: 0.1rem solid var(--logo);
+
+  
 }
 .iniciarSesion  .buscador {
   width: 20rem;
@@ -92,7 +101,6 @@ header{
 
 .registro_iniciar{
   width: 20%;
-  
   display: flex;
   gap: 3rem;
 }
@@ -101,9 +109,30 @@ header{
   text-decoration: none;
 }
 .registro_iniciar a:hover{
+  font-size: larger;
+}
+.registro_iniciar a:hover{
   color: white;
 }
 
+
+.cerrar_session{
+  width: 7rem;
+  height: 2rem;
+  border-radius: 1rem 1rem 1rem;
+  background: linear-gradient(20deg ,black 40% , grey,black );
+  border: 0;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+.cerrar_session:hover{
+font-size: large;
+color: var(--logo);
+
+}
  /* estilos/navegacion */
 #menu{
 
@@ -212,10 +241,6 @@ section{
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
-  
-  
-
-  
 }
 .cars {
   width: 150px;
@@ -302,9 +327,51 @@ height: 70%;
 .pagi:hover{
   font-size: medium;
 }
-.index{
-  width: 7rem;
+/*wstilos del bottom del menu y del despllegable del section*/
+.acount{
+  width: 12rem;
+  height: 15rem;
+  position: fixed;
+  z-index: 8;
+  left: 4.5rem;
+  bottom: 2rem;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 2rem 2rem 2rem;
+  background-color: var(--cars);
 }
+.verAcount{
+  display: flex;
+}
+.acount a{
+  border-bottom: 0.1rem solid var(--logo) ;
+  width: 10rem;
+  height: 5rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+}
+
+.acount a:hover{
+  font-size: large;
+}
+.acount_button{
+  position: fixed;
+  bottom: 2rem;
+}
+    .bottom{
+    background-color:transparent;
+    border: 0;
+   
+    }
+
+
 
 /*estilos del fotter*/
 #footer{

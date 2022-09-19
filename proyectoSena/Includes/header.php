@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/exchangecity/proyectoSena/css/publicarProductos.css">
   <link rel="stylesheet" href="/exchangecity/proyectoSena/css/editarPublicacion.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+ 
   <title>Contenido</title>
 </head>
 
@@ -32,11 +33,11 @@
     
       <input class="buscador" type="text" value="Buscar"/> 
       <?php  if(isset($_SESSION["login_correcto"])):?>
-          <div>
+          <div class="bienvenido">
               <h3>Bienvenido <?php echo $_SESSION["login_correcto"]["usu_nombre"] ." ".$_SESSION["login_correcto"]["usu_apellido"]?></h3>
               
           </div>
-          <button>cerra  sesion</button>
+          <a class="cerrar_session" href="/exchangecity/proyectoSena/backend/cerrar_session.php" >cerra  sesion</a>
       <?php endif; ?>
 
       
@@ -62,7 +63,7 @@
       unset($_SESSION["login_erroneo"]);
       unset($_SESSION["contrasena_erronea"]);
       unset($_SESSION["password"]);
-      //unset($_SESSION["login_correcto"]);
+      
   ?>
 
 
