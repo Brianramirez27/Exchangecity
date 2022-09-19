@@ -1,5 +1,12 @@
+
+:root{
+    --letra: #b4b4b4;
+    --logo:#10d078;
+    --cars:#323a40;
+  
+  }
 .publicarProductos{
-    border: 0.2rem solid #750a45 ;
+    border: 0.2rem solid var(--logo);
     width: 80%;
     display: flex;
     flex-direction: column;
@@ -17,9 +24,23 @@
 .publicarProductos input,textarea,select{
     width: 50%;
     height: auto;
-
-    
+    background-color: transparent; 
+    color: white;
+}
+.publicarProductos textarea{
+    color: white;
+    resize: none;
+    height: 5rem;
+}
+.publicarProductos  select,option{
+   
+  background: var(--cars);
 }
 .actualizarProducto{
     display: none;
+}
+
+.publicarProductos .inputPublicar{
+    border: 0;
+    border-bottom: 1px solid white ;
 }
