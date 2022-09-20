@@ -16,12 +16,15 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
           <div class="datos">
               <div class="datoImagen">
                   <img src="data:image/JPG;base64,<?php echo base64_encode($_SESSION["login_correcto"]["usu_img_perfil"]);?>" /> 
+                  <?php echo isset($_SESSION["imagen_correcta"]) ? "<div>".$_SESSION["imagen_correcta"]."</div>":"";?>
+                  <?php echo isset($_SESSION["imagen_fallo"]) ? "<div>".$_SESSION["imagen_fallo"]."</div>":"";?>
                   <input type="file" placeholder="Foto de perfil" name="imagenPerfil">
-                  <textarea class="datosDes" name="descripcion" id="" cols="30" rows="10">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Soluta placeat hic, natus eius,
-                     sint amet esse repellat officiis facilis odit laudantium sed possimus! Minima asperiores voluptatum odio ullam! Minima, sint.</textarea>
+                  <textarea class="datosDes" name="descripcion" ><?php echo $_SESSION["login_correcto"]["usu_descripcion"]?></textarea>
                   
               </div>      
               <div class="datosGenerales">  
+              <?php echo isset($_SESSION["actualizacion_correcta"]) ? "<div>".$_SESSION["actualizacion_correcta"]."</div>":"";?>
+              <?php echo isset($_SESSION["actualizacion_fallo"]) ? "<div>".$_SESSION["actualizacion_fallo"]."</div>":"";?>
                 <div class="datosPersonales">
                   <h1>Datos personales</h1>
                   <label class="labelDatos datosPreguntas" for="nombre">Nombres:</label>
@@ -55,7 +58,8 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                     <?php endif; ?>    
                   <?php endwhile;?>               
                   </select>
-
+                  <?php echo isset($_SESSION["tipo_correcto"]) ? "<div>".$_SESSION["tipo_correcto"]."</div>":"";?>
+                  <?php echo isset($_SESSION["tipo_fallo"]) ? "<div>".$_SESSION["tipo_fallo"]."</div>":"";?>
                   <label class="labelDatos  datosPreguntas" name="contacto" >whatsapp</label>  
                   <input class="inputDatos inputLogin" type="text" name="contacto" value="<?php echo $_SESSION["login_correcto"]["usu_contacto"] ?>"> 
                   <label class="labelDatos  datosPreguntas" for="redSocial" >red social</label> 
@@ -76,4 +80,11 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
   ?>
   <!--limpiamos los flotados del aside -->
   <div style="clear: both"></div>
+
+  <?php unset($_SESSION["imagen_correcta"]);
+   unset($_SESSION["imagen_fallo"]);
+   unset($_SESSION["actualizacion_correcta"]);
+   unset($_SESSION["actualizacion_fallo"]);
+   unset($_SESSION["tipo_correcto"]);
+   unset($_SESSION["tipo_fallo"]) ;?>
  
