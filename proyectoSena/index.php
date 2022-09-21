@@ -15,7 +15,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
     
       <div class="cars">
           <h3>Categoria</h3>
-          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+          <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jpg" alt="">
           <div class="conterCars">
             <a href="/exchangecity/PROYECTOSENA/includes/descripcion.php"><h2>producto</h2></a>
             <p>especificacion del producto</p>
