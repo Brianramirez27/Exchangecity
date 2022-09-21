@@ -11,7 +11,18 @@ function ConsultarCiudades($db){
     return $datosCiudad;
 }
 
-
-
 ?>
+<?php
+function ConsultarCategoria($db){
+    $sql="SELECT * FROM categoria ";
+
+    if($datosCategoria=mysqli_query($db,$sql)){
+        
+    }else{
+        echo mysqli_error($db);
+    }
+    return $datosCategoria;
+}
+?>
+
 
