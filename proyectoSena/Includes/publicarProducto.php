@@ -15,7 +15,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
             <h1>Publicar Producto</h1>
         </div>
         <section>
-        <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/productoPublicar.php"  method="POST">
+        <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/productoPublicar.php" enctype="multipart/form-data" method="POST">
                 <label for="tituloPublicacionv">Titulo Publicacion</label>
                 <input  class="inputPublicar inputLogin" type="text" name="tituloPublicacion">
                 <label for="descripcion">Descripcion de la Publicacion</label>
