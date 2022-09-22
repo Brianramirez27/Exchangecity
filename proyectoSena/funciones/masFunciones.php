@@ -25,4 +25,29 @@ function ConsultarCategoria($db){
 }
 ?>
 
+<?php
+    function  ConsultarDatosVerificado($db){       
+       $codigoUsu= $_SESSION["login_correcto"]["usu_codigo"];
+       $sql="SELECT * FROM datos_verificado where FK_dat_codigo_du= '$codigoUsu'";
+       if($consultaVer=mysqli_query($db,$sql)){
+            return $consultaVer;
+       }else{
+        return false;
+        }
+    }
+?>
+
+}<?php
+function ConsultarEstado($db){
+    $sql="SELECT * FROM estado ";
+
+    if($datosEstado=mysqli_query($db,$sql)){
+        
+    }else{
+        echo mysqli_error($db);
+    }
+    return $datosEstado;
+}
+?>
+
 
