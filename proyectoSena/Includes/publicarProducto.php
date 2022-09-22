@@ -25,20 +25,31 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 <?php $categorias=ConsultarCategoria($db) ?>
                 <label for="categoriaId">Categorias</label>
                 <select name="categoriaId">
-                  <?php while($categoria=mysqli_fetch_assoc($categorias)): ?>
+                    <option selected="selected" disabled="diseabled" >Seleccionar</option>
+                  <?php while($categoria=mysqli_fetch_assoc($categorias)): ?>                   
                     <option><?php echo $categoria["cat_tipo"];?></option>
                     
                     <?php endwhile;?>   
                 </select>
                 <label for="estado"> Estado del producto</label>
+                <?php $estados=ConsultarEstado($db);
+                 ?>
                 <select name="estado">
-                    <option>Nuevo</option>
-                    <option>usuado</option> 
+                <option selected="selected" disabled="diseabled" >Seleccionar</option>
+                    <?php while($estado=mysqli_fetch_assoc($estados)):?>
+                      <option><?php echo $estado["est_nombre"];?></option> 
+                    <?php endwhile; ?>
                 </select>
                 <label for="fotoPrincipal">Foto Principal</label>
                 <input class="inputPublicar inputLogin" type="file" name="fotoPrincipal">
-                <label for="masFotos">Mas Fotos De la Publicacion</label>
-                <input class="inputPublicar inputLogin" type="file" name="masFotos">
+                <label for="imagen1">Imagen 1</label>
+                <input class="inputPublicar inputLogin" type="file" name="imagen1">
+                <label for="imagen2">Imagen 2</label>
+                <input class="inputPublicar inputLogin" type="file" name="imagen2">
+                <label for="imagen3">Imagen 3</label>
+                <input class="inputPublicar inputLogin" type="file" name="imagen3">
+                <label for="imagen4">Imagen 4</label>
+                <input class="inputPublicar inputLogin" type="file" name="imagen4">
                 <input  class="buttomProducto" type="submit" value="Publicar">
             </form>
             <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?> 
