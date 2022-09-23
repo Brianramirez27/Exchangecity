@@ -264,7 +264,7 @@ section{
   font-size: 0.8rem;
   display: inline-flex;
   padding: 0.1rem;
-  color:var(--letra);
+  color:var(--logo);
   background-color: #181c1f;;
   /*background: linear-gradient(20deg, blueviolet ,black);*/
   float: right;

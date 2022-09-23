@@ -89,6 +89,22 @@ function ConsultarEstadoPublicacion($db,$id_estado){
 }
 ?>
 
+<?php
+
+function ConsultarDescripcionPublicacion($db,$id_publicacion){
+    $sql="SELECT * FROM publicacion WHERE pub_codigo='$id_publicacion'";
+
+    if($datosDescripcionPublicacion=mysqli_query($db,$sql)){
+        
+    }else{
+        echo mysqli_error($db);
+    }
+    return $datosDescripcionPublicacion;
+}
+?>
+
+
+
 
 
 

@@ -16,17 +16,14 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
     <?php $publicaciones=ConsultarPublicaciones($db); ?>
     <?php while($publicacion=mysqli_fetch_assoc($publicaciones)) : ?>
       <?php $categoriaPublicacion=ConsultarCategoriaPublicacion($db,$publicacion["FK_cat_codigo_pc"]) ;
-            $nombreCategoria=mysqli_fetch_assoc($categoriaPublicacion);
-           
+            $nombreCategoria=mysqli_fetch_assoc($categoriaPublicacion); 
       ?>
       <div class="cars">
           <h3><?php echo $nombreCategoria["cat_tipo"];?></h3>
-
           <img src="data:image/JPG;base64,<?php echo base64_encode($publicacion["pub_img_general"]);?>" />
           <div class="conterCars">
             <a href="/exchangecity/PROYECTOSENA/includes/descripcion.php?pub_codigo=<?php echo$publicacion["pub_codigo"] ?>"><h2><?php echo substr($publicacion["pub_titulo"],0,15);?></h2></a>
             <p><?php echo substr($publicacion["pub_descripcion"],0,30)."...";?></p>
-            
             <?php  $estadoPublicacion= ConsultarEstadoPublicacion($db,$publicacion["FK_est_codigo_pe"]);
               $nombreEstado=mysqli_fetch_assoc($estadoPublicacion);
             ?>
@@ -55,5 +52,4 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
  
   <?php 
   include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
-  
   ?>

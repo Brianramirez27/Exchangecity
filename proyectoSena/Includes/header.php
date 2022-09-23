@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="/exchangecity/proyectoSena/css/datosusuario.css">
   <link rel="stylesheet" href="/exchangecity/proyectoSena/css/publicarProductos.css">
   <link rel="stylesheet" href="/exchangecity/proyectoSena/css/editarPublicacion.css">
+  <link rel="stylesheet" href="/exchangecity/proyectoSena/css/descripcion.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
  
   <title>Contenido</title>
@@ -35,7 +36,6 @@
       <?php  if(isset($_SESSION["login_correcto"])):?>
           <div class="bienvenido">
               <h3>Bienvenido <?php echo $_SESSION["login_correcto"]["usu_nombre"] ." ".$_SESSION["login_correcto"]["usu_apellido"]?></h3>
-              
           </div>
           <a class="cerrar_session" href="/exchangecity/proyectoSena/backend/cerrar_session.php" >cerra  sesion</a>
       <?php endif; ?>
