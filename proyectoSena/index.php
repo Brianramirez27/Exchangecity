@@ -13,6 +13,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
       <h1>Productos Publicados</h1>
     </div>
     <section>
+       
     <?php $publicaciones=ConsultarPublicaciones($db); ?>
     <?php while($publicacion=mysqli_fetch_assoc($publicaciones)) : ?>
       <?php $categoriaPublicacion=ConsultarCategoriaPublicacion($db,$publicacion["FK_cat_codigo_pc"]) ;

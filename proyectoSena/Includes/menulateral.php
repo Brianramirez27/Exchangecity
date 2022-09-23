@@ -7,25 +7,25 @@
       </a>
     </div>
     <div class="icono">
-      <a class="menuObjeto" href="/exchangecity/proyectoSena/Includes/categorias.php">
+      <a class="menuObjeto" href="/exchangecity/proyectoSena/Includes/categorias.php?tipo=TV">
         <img class="menuIcono" src="/exchangecity/PROYECTOSENA/imagenes/Navegacion/svg/tv.svg" alt="televisores.svg">
         <span>TV</span>
       </a>
     </div>
     <div class="icono">
-      <a class="menuObjeto" href="/exchangecity/proyectoSena/Includes/categorias.php">
+      <a class="menuObjeto" href="/exchangecity/proyectoSena/Includes/categorias.php?tipo=Movil">
         <img class="menuIcono" src="/exchangecity//PROYECTOSENA/imagenes/Navegacion/svg/smartphone.svg" alt="movil.svg">
         <span>Movil</span>
       </a>
     </div>
     <div class="icono">
-      <a class="menuObjeto" href="/exchangecity/proyectoSena/Includes/categorias.php">
+      <a class="menuObjeto" href="/exchangecity/proyectoSena/Includes/categorias.php?tipo=Pc">
         <img class="menuIcono" src="/exchangecity//PROYECTOSENA/imagenes/Navegacion/svg/pc.svg" alt="computadoras.svg">
         <span>PC</span>
       </a>
     </div>
     <div class="icono">
-      <a class="menuObjeto" href="/exchangecity/proyectoSena/Includes/categorias.php">
+      <a class="menuObjeto" href="/exchangecity/proyectoSena/Includes/categorias.php?tipo=Consolas">
         <img class="menuIcono" src="/exchangecity//PROYECTOSENA/imagenes/Navegacion/svg/console-controller.svg" alt="consolas.svg">
         <span> Consolas</span>
       </a>

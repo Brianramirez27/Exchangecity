@@ -88,6 +88,18 @@ function ConsultarEstadoPublicacion($db,$id_estado){
     return $datosEstadoPublicacion;
 }
 ?>
+<?php
+    function ConsultarPublicacionCat($db,$id_categoria){
+        $sql="SELECT * FROM publicacion WHERE FK_cat_codigo_pc='$id_categoria'";
+
+        if($publicacionCategoria=mysqli_query($db,$sql)){
+
+        }else{
+            echo mysqli_error($db);
+        }
+        return $publicacionCategoria;
+    }
+?>
 
 
 
