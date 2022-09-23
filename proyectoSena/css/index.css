@@ -306,6 +306,7 @@ height: 65%;
   display: flex;
   flex-direction: row;
   justify-content: center;
+ 
 
 }
 .paginas{
@@ -317,6 +318,7 @@ height: 65%;
   justify-content: center;
   align-items: center;
   gap: 0.2rem;
+   
 }
 .pagi{
   
@@ -327,10 +329,12 @@ height: 65%;
   align-items: center;
   color:rgb(0, 0, 0);
   text-decoration: none;
+  color: white;
 
 }
 .pagi:hover{
   font-size: medium;
+  background-color: var(--logo);
 }
 /*wstilos del bottom del menu y del despllegable del section*/
 .acount{
