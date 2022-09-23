@@ -28,7 +28,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
       <?php endwhile; ?>
       <?php  isset($_SESSION["error"]["nombre"]) ? "<div class='prueba'>".$_SESSION["error"]["nombre"]."</div>":"";?>
       <!-- paginacion -->
-      <div class="contenidoPaginacion">
+      <!-- <div class="contenidoPaginacion">
         <div class="paginas">
           <a class="pagi index" href="/PROYECTOSENA/index.php">Pagina Inicio ...</a>
           <a class="pagi" href="/PROYECTOSENA/paginacion/paginacion1.php">1</a>
@@ -37,7 +37,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
           <a class="pagi" href="/PROYECTOSENA/paginacion/paginacion4.php">4</a>
           <a class="pagi"href="/PROYECTOSENA/paginacion/paginacion5.php">5</a>
       </div>
-    </div>
+    </div> -->
   <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
     </section>
   </section>
