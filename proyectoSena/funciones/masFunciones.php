@@ -37,7 +37,7 @@ function ConsultarCategoria($db){
     }
 ?>
 
-}<?php
+<?php
 function ConsultarEstado($db){
     $sql="SELECT * FROM estado ";
 
@@ -49,5 +49,33 @@ function ConsultarEstado($db){
     return $datosEstado;
 }
 ?>
+
+<?php
+function ConsultarPublicaciones($db){
+    $sql="SELECT * FROM publicacion  ORDER BY  pub_codigo  DESC LIMIT 10";
+
+    if($datosPublicacion=mysqli_query($db,$sql)){
+        
+    }else{
+        echo mysqli_error($db);
+    }
+    return $datosPublicacion;
+}
+?>
+
+<?php
+// function ConsultarCategoriaPublicacion($db ,$categoriaPublicaion){
+//     $sql="SELECT * FROM categoria  WHERE cat_codigo=''$categoriaPublicaion";
+
+//     if($datosCategoriaPubli=mysqli_query($db,$sql)){
+        
+//     }else{
+//         echo mysqli_error($db);
+//     }
+//     return $datosCategoriaPubli;
+// }
+// ?>
+
+
 
 
