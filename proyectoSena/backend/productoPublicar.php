@@ -83,8 +83,7 @@ if($verificado=mysqli_fetch_assoc($consultaFun)){
 }else{
 $error["noVerificado"]="Por Favor Verificarse Gracias";
 }
-
-
+//se comprueba que no hallan errores para guardar la publicacion
 if(count($error)==0){         
     $sql1="INSERT INTO publicacion  
     VALUES (NULL,'$tituloPub','$descripcionPub','$conversion_prin','$conversion_img1',
@@ -92,7 +91,7 @@ if(count($error)==0){
     '$categoriaIdPub','$estadoPub');" ;
     if(mysqli_query($db,$sql1)){
         echo "se inserto correctamente";
-        header("location:/exchangecity/proyectosena/includes/publicarProducto.php");
+        header("location:/exchangecity/proyectosena/index.php");
     }else{
         echo "no se inserto".mysqli_error($db);
     }
