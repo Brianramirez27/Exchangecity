@@ -64,17 +64,30 @@ function ConsultarPublicaciones($db){
 ?>
 
 <?php
-// function ConsultarCategoriaPublicacion($db ,$categoriaPublicaion){
-//     $sql="SELECT * FROM categoria  WHERE cat_codigo=''$categoriaPublicaion";
+function ConsultarCategoriaPublicacion($db,$id_categoria){
+    $sql="SELECT * FROM categoria  WHERE cat_codigo='$id_categoria'";
 
-//     if($datosCategoriaPubli=mysqli_query($db,$sql)){
+    if($datosCategoriaPublicacion=mysqli_query($db,$sql)){
         
-//     }else{
-//         echo mysqli_error($db);
-//     }
-//     return $datosCategoriaPubli;
-// }
-// ?>
+    }else{
+        echo mysqli_error($db);
+    }
+    return $datosCategoriaPublicacion;
+}
+?>
+
+<?php
+function ConsultarEstadoPublicacion($db,$id_estado){
+    $sql="SELECT * FROM estado WHERE est_codigo='$id_estado'";
+
+    if($datosEstadoPublicacion=mysqli_query($db,$sql)){
+        
+    }else{
+        echo mysqli_error($db);
+    }
+    return $datosEstadoPublicacion;
+}
+?>
 
 
 

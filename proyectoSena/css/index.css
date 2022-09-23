@@ -271,6 +271,7 @@ section{
   
   
 }
+
 .cars img{
 position: relative;
 bottom: 1rem;
@@ -292,6 +293,10 @@ height: 65%;
   font-size: 1.6rem;
   color:var(--logo);
   
+}
+
+.cars .estado{
+  color: var(--logo);
 }
 
 /* estilos de l paginacion */
