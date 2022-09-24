@@ -2,26 +2,22 @@
 include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/conexionDB.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
-include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
-
-
+include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
 
 ?>
 
 
-
- 
   <!--contenido de la pagina o aside-->
   <section id="container">
     <div class="titulo">
-      <h1>Descricion del producto</h1>
+      <h1>Descripcion</h1>
     </div>
     <article>
         <div class="producto">
-            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
+        <img src="data:image/JPG;base64,<?php echo base64_encode($descripcionPublicacion["pub_img_general"]);?>" />
         </div>
         <div class="descricion">
-            <h2>nombre producto</h2>
+            <h2><?php echo $descripcionPublicacion["pub_titulo"]?></h2>
             <div class="valoracion">
                 <div>
                     <p>valoraccion</p>
@@ -38,6 +34,9 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
                     <p> 3.6</p>
                 </div>
                 <div>
+                    <?php $usuarioVerificado=ConsultarDatosVerificado($db);
+                    $datosVerificado=mysqli_fetch_assoc($usuarioVerificado);
+                    ?>
                     <p>verificado<p>
                     <span class="material-symbols-outlined">
                         done_outline
@@ -46,8 +45,10 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
                 </div>
             </div>
             <div class="parrafo">
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus perspiciatis optio nisi unde deleniti esse, labore, accusamus officiis dolore velit quo veniam repellat, ex ipsam nobis aspernatur aut praesentium. Eligendi.</p>
+                <p>Descripcion: <?php echo $descripcionPublicacion["pub_descripcion"]?></p>
+                <p>Intereses: <?php echo $descripcionPublicacion["pub_intereses"]?></p>
             </div>
+          
             <div class=" info">
               <div>
                 <h2>Ofreser Intercambio</h2>
@@ -62,12 +63,12 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
     </article>
     <section class="fotos">
         <div class="galeria">
-            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
-            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/celular.jfif" alt="">
-            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/consola.jfif" alt="">
-            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/tableta.jfif" alt="">
-            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
-            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+        <img src="data:image/JPG;base64,<?php echo base64_encode($descripcionPublicacion["pub_img1"]);?>" />
+        <img src="data:image/JPG;base64,<?php echo base64_encode($descripcionPublicacion["pub_img2"]);?>" />
+        <img src="data:image/JPG;base64,<?php echo base64_encode($descripcionPublicacion["pub_img3"]);?>" />
+        <img src="data:image/JPG;base64,<?php echo base64_encode($descripcionPublicacion["pub_img4"]);?>" />
+            <!-- <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/computador.jfif" alt="">
+            <img src="/exchangecity/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt=""> -->
         </div>
         <div class="galeriaPrincipal">
             <div class="galeriaInterna">
