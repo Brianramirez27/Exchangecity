@@ -26,7 +26,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
   <!--limpiamos los flotados del aside -->
   <div style="clear: both"></div>
 
- ;
+ 
   <?php 
   include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
   

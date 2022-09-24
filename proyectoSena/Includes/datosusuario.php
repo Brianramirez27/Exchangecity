@@ -42,7 +42,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                   <label class="labelDatos  datosPreguntas">transacciones realizadas:</label>
                   <input class="inputDatos inputLogin" disabled="diseabled" value="5 transacciones realizadas"></input>
                   <label class="labelDatos  datosPreguntas">No Verificado/Verificado</label>
-                  <input class="inputDatos inputLogin" disabled="diseabled"  value="Verificado" >  </input>
+                  
                 </div>
                 <div class="datosContacto">
                   <h1>Datos contacto</h1>
@@ -67,7 +67,8 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                   
                 </div>
                 <div class="actualizarDatos">
-                      <input class="actualizarDatos" type="submit" value="Actualizar">  
+                      <input class="actualizarDatos" type="submit" value="Actualizar"> 
+                      <a class="botonVer actualizarDatos" href="/exchangecity/proyectoSena/Includes/verificacion.php"></a> 
                 </div>      
           </div>
       </div>

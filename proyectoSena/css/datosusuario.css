@@ -101,6 +101,11 @@
     display: flex;
     justify-content: flex-start;
 }
+.actualizarDatos .botonVer{
+    width: 2rem;
+    height: 1rem;
+    background-color: white;
+}
 
 
 .datosContacto{
