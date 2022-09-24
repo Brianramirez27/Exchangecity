@@ -6,6 +6,12 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
 
 ?>
 
+<?php $pub_codigo=$_REQUEST["pub_codigo"];
+    $datosPublicacion=ConsultarDescripcionPublicacion($db,$pub_codigo);
+    $descripcionPublicacion=mysqli_fetch_assoc($datosPublicacion);
+?>
+  
+
 
   <!--contenido de la pagina o aside-->
   <section id="container">
