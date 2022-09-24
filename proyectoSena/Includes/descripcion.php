@@ -6,11 +6,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
 
 ?>
 
-<?php $pub_codigo=$_REQUEST["pub_codigo"];
-    $datosPublicacion=ConsultarDescripcionPublicacion($db,$pub_codigo);
-    $descripcionPublicacion=mysqli_fetch_assoc($datosPublicacion);
-?>
-  
+
   <!--contenido de la pagina o aside-->
   <section id="container">
     <div class="titulo">
@@ -92,8 +88,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
   <!--limpiamos los flotados del aside -->
   <div style="clear: both"></div>
  
-</body>
-</html>
+
 <?php
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php";
 ?>

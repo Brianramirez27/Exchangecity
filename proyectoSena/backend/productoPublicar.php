@@ -23,7 +23,7 @@ if($verificado=mysqli_fetch_assoc($consultaFun)){
    /*se relaiza un if para saber la categoria */
     if($categoriaIdPub){
         if($categoriaIdPub=="TV"){
-            $categoriaIdPub=1;
+            $categoriaIdPub=5;
         }elseif ($categoriaIdPub=="Movil"){
         
             $categoriaIdPub=2;
