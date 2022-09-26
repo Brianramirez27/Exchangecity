@@ -35,6 +35,34 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 </div>
                 <button class="editar">Editar</button>
             </div>
+              <form class="editarPublicacion  publicarProductos" action="/PROYECTOSENA/backend/publicacionEditar.php" method="POST">
+            <div class="tituloPublicar"> 
+
+                <h1>Actualiazar Producto</h1>
+                <p class="cerrarPublicarProductos">x</p>
+            </div>
+           
+            <label for="nombreProducto">Nombre Producto</label>
+            <input type="text" name="nombreProducto">
+            <label for="descripcion">Descicion del producto</label>
+            <textarea name="descripcion"></textarea>
+            <label for="esatdo"> Estado del producto</label>
+            <select name="estado">
+
+                <option>Nuevo</option>
+
+                <option>usuado</option>
+            </select>
+            <label for="fotoPrincipal">Foto Principal</label>
+            <input type="file" name="fotoPrincipal">
+            <label for="masFotos">Mas Fotos Del Producto</label>
+
+            <input type="file" name="fotoPrincipal">
+            <input  class="buttomProducto" type="submit" value="editar">
+
+            <input  class="buttomProducto" type="submit" value="Eliminar Publicacion">
+            
+        </form>
         <?php endwhile; ?> 
         
 
