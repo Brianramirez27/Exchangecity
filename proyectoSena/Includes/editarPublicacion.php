@@ -35,10 +35,9 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 </div>
                 <button class="editar">Editar</button>
             </div>
-        </div>   
-         
-        <?php endwhile; ?>  
-       
+        <?php endwhile; ?> 
+        
+
         <script src="/exchangecity/PROYECTOSENA/js/editarPublicacion.js"></script>
         <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
     </section>

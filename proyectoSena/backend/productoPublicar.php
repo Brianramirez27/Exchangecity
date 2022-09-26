@@ -17,7 +17,7 @@ $imagen4 = isset($_FILES["imagen4"]["tmp_name"]) ? $_FILES["imagen4"]["tmp_name"
 
  
 $consultaFun=ConsultarDatosVerificado($db);
-$error=array();
+$error=0;
 if($verificado=mysqli_fetch_assoc($consultaFun)){
    
    /*se relaiza un if para saber la categoria */
@@ -34,7 +34,8 @@ if($verificado=mysqli_fetch_assoc($consultaFun)){
             $categoriaIdPub=4;    
         }
     }else{
-        $error["error_Categoria"]="no seleciono la categoria";
+        $_SESSION["error_Categoria"]="no seleciono la categoria";
+        $error+=1;
        
     }
     /*se crea un if para saber el estado del producto */
@@ -46,7 +47,8 @@ if($verificado=mysqli_fetch_assoc($consultaFun)){
             $estadoPub=2;
         }
     }else{
-        $error["error_Estado"]="no seleciono el estado del producto";
+        $_SESSION["error_Estado"]="no seleciono el estado del producto";
+        $error+=1;
        
     }   
         /* se valida que se reciban todas las imagenes */
@@ -76,15 +78,16 @@ if($verificado=mysqli_fetch_assoc($consultaFun)){
         $conversion_img3=addslashes($conversion_img3);
         $conversion_img4=addslashes($conversion_img4);
     }else{
-        $error["errorImagen"]="porfavor lleno todos los campos de imagen";
-            
+        $_SESSION["errorImagen"]="porfavor lleno todos los campos de imagen";
+        $error+=1;       
     }
            
 }else{
-$error["noVerificado"]="Por Favor Verificarse Gracias";
+$_SESSION["noVerificado"]="Por Favor Verificarse Gracias";
+$error+=1;
 }
 //se comprueba que no hallan errores para guardar la publicacion
-if(count($error)==0){         
+if($error==0){         
     $sql1="INSERT INTO publicacion  
     VALUES (NULL,'$tituloPub','$descripcionPub','$conversion_prin','$conversion_img1',
     '$conversion_img2','$conversion_img3','$conversion_img4','$interesesPub','$id',
@@ -96,9 +99,8 @@ if(count($error)==0){
         echo "no se inserto".mysqli_error($db);
     }
 }else{
-    $_SESSION["error"]=$error;
-    echo "se encontraron errores";
-    echo $_SESSION["error"];
+    header("location:/exchangecity/proyectosena/includes/publicarProducto.php");
+    
 }
 
 ?>

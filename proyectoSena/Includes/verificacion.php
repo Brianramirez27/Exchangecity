@@ -10,7 +10,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
         <h1>Verificacion Usuario</h1>
     </div>
 <section>
-    <form class="verificadoForm login"   action="">
+    <form class="verificadoForm login"   action="/exchangecity/proyectoSena/backend/verificacion.php"  enctype="multipart/form-data" method="POST" >
         <label for="imagenCedula">Imagen de la cedula</label>
         <input class="inputVerificado inputLogin" type="file" name="imagenCedula">
         <label for="imagenDirreccion">Imagen para comprovar dirrecion</label>

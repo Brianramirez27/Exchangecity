@@ -42,6 +42,17 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                   <label class="labelDatos  datosPreguntas">transacciones realizadas:</label>
                   <input class="inputDatos inputLogin" disabled="diseabled" value="5 transacciones realizadas"></input>
                   <label class="labelDatos  datosPreguntas">No Verificado/Verificado</label>
+                  <?php $datosVerificados= ConsultarVerificados($db,$_SESSION["login_correcto"]["usu_codigo"]);
+                            $datosVerificado=mysqli_fetch_assoc($datosVerificados);           
+                  ?>
+                  <div>
+                  <input class="inputDatosVer inputLogin" type="text" value="<?php if(isset ($datosVerificado)){
+                    echo "VERIFICADO";
+                  }else{
+                    echo "NO VERIFICADO";
+                  } 
+                  ?>" >
+                  </div>
                   
                 </div>
                 <div class="datosContacto">
@@ -68,7 +79,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                 </div>
                 <div class="actualizarDatos">
                       <input class="actualizarDatos" type="submit" value="Actualizar"> 
-                      <a class="botonVer actualizarDatos" href="/exchangecity/proyectoSena/Includes/verificacion.php"></a> 
+                      <a class="botonVer actualizarDatos"  href="/exchangecity/proyectoSena/Includes/verificacion.php">Enviar</a>           
                 </div>      
           </div>
       </div>
