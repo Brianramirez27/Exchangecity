@@ -50,7 +50,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 <input class="inputPublicar inputLogin" type="file" name="imagen3">
                 <label for="imagen4">Imagen 4</label>
                 <input class="inputPublicar inputLogin" type="file" name="imagen4">
-                <input  class="buttomProducto" type="submit" value="Publicar">
+                <input  class="buttomProducto actualizarDatos" type="submit" value="Publicar">
             </form>
             <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?> 
     </section>

@@ -2,6 +2,7 @@
 include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/conexionDB.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
+include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
 
 ?>
 
@@ -10,44 +11,34 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
  <!--contenido de la pagina o aside-->
   <section id="container">
   <div class="titulo">
-            <h1>Productos Publicados</h1>
+            <h1>Editar Publicaciones</h1>
         </div>
     <section>
-        <div class="productoPublicado ">
+        <?php  $datosPublicacion=ConsultarPublicacionesUsuario($db,$_SESSION["login_correcto"]["usu_codigo"]); ?>
+        <?php  while($publicacionUsuario=mysqli_fetch_assoc($datosPublicacion)):?>
+            <?php $categoriaPublicacion=ConsultarCategoriaPublicacion($db,$publicacionUsuario["FK_cat_codigo_pc"]) ;
+                $nombreCategoria=mysqli_fetch_assoc($categoriaPublicacion); 
+            ?>
+            <div class="productoPublicado ">
             <div class="carsBottom">
                 <div class="cars">
-                    <h3>Categoria</h3>
-                    <img src="/PROYECTOSENA/imagenes/conteiner/televisor.jfif" alt="">
+                    <h3><?php echo $nombreCategoria["cat_tipo"];?></h3>
+                    <img src="data:image/JPG;base64,<?php echo base64_encode($publicacionUsuario["pub_img_general"]);?>" />
                     <div class="conterCars">
                     <a href="/PROYECTOSENA/paginas/descricion.html"><h2>producto</h2></a>
-                    <p>especificacion del producto</p>
+                    <p><?php echo substr($publicacionUsuario["pub_descripcion"],0,30)."...";?></p>
+                    <?php  $estadoPublicacion=ConsultarEstadoPublicacion($db,$publicacionUsuario["FK_est_codigo_pe"]);
+                        $nombreEstado=mysqli_fetch_assoc($estadoPublicacion);
+                     ?>
+                    <p class="estado"><?php echo $nombreEstado["est_nombre"];?></p>
                     </div>
                 </div>
                 <button class="editar">Editar</button>
             </div>
-        </div>    
-        <form class="editarPublicacion publicarProductos" action="/PROYECTOSENA/backend/publicacionEditar.php" method="POST">
-            <div class="tituloPublicar">
-                <h1>Actualiazar Producto</h1>
-                <p class="cerrarPublicarProductos">x</p>
-            </div>
-           
-            <label for="nombreProducto">Nombre Producto</label>
-            <input type="text" name="nombreProducto">
-            <label for="descripcion">Descicion del producto</label>
-            <textarea name="descripcion"></textarea>
-            <label for="esatdo"> Estado del producto</label>
-            <select name="estado">
-                <option>Nuevo</option>
-                <option>usuado</option>
-            </select>
-            <label for="fotoPrincipal">Foto Principal</label>
-            <input type="file" name="fotoPrincipal">
-            <label for="masFotos">Mas Fotos Del Producto</label>
-            <input type="file" name="fotoPrincipal">
-            <input  class="buttomProducto" type="submit" value="editar">
-            <input  class="buttomProducto" type="submit" value="Eliminar Publicacion">
-        </form>
+        </div>   
+         
+        <?php endwhile; ?>  
+       
         <script src="/exchangecity/PROYECTOSENA/js/editarPublicacion.js"></script>
         <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
     </section>

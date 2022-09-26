@@ -117,6 +117,22 @@ function ConsultarDescripcionPublicacion($db,$id_publicacion){
 
 
 
+<?php
+
+function ConsultarPublicacionesUsuario($db,$id_usuario){
+
+    $sql="SELECT * FROM publicacion WHERE FK_dat_codigo_pd_usu='$id_usuario'";
+
+    if($datosPublicacionesUsuario=mysqli_query($db,$sql)){
+        
+    }else{
+        echo mysqli_error($db);
+    }
+    return $datosPublicacionesUsuario;
+}
+?>
+
+
 
 
 

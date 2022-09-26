@@ -44,3 +44,14 @@
     border: 0;
     border-bottom: 1px solid white ;
 }
+
+
+
+input[type="submit"]{
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    color: white;
+    border-radius: 1rem 1rem 1rem;
+    background: linear-gradient(20deg ,black 40% , grey,black );
+}
