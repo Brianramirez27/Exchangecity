@@ -17,6 +17,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
         <section>
         <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/productoPublicar.php" enctype="multipart/form-data" method="POST">
                 <label for="tituloPublicacionv">Titulo Publicacion</label>
+                <?php echo isset ($_SESSION["noVerificado"]) ? $_SESSION["noVerificado"]:""; ?>
                 <input  class="inputPublicar inputLogin" type="text" name="tituloPublicacion">
                 <label for="descripcion">Descripcion de la Publicacion</label>
                 <textarea class="inputPublicar inputLogin" name="descripcion"></textarea>
@@ -24,6 +25,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 <textarea class="inputPublicar inputLogin" name="intereses"></textarea>
                 <?php $categorias=ConsultarCategoria($db) ?>
                 <label for="categoriaId">Categorias</label>
+                <?php echo isset ($_SESSION["error_Categoria"]) ? $_SESSION["error_Categoria"]:""; ?>
                 <select name="categoriaId">
                     <option selected="selected" disabled="diseabled" >Seleccionar</option>
                   <?php while($categoria=mysqli_fetch_assoc($categorias)): ?>                   
@@ -32,6 +34,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                     <?php endwhile;?>   
                 </select>
                 <label for="estado"> Estado del producto</label>
+                <?php echo isset ($_SESSION["error_Estado"]) ? $_SESSION["error_Estado"]:""; ?>
                 <?php $estados=ConsultarEstado($db);
                  ?>
                 <select name="estado">
@@ -41,6 +44,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                     <?php endwhile; ?>
                 </select>
                 <label for="fotoPrincipal">Foto Principal</label>
+                <?php echo isset ($_SESSION["errorImagen"]) ? $_SESSION["errorImagen"]:""; ?>
                 <input class="inputPublicar inputLogin" type="file" name="fotoPrincipal">
                 <label for="imagen1">Imagen 1</label>
                 <input class="inputPublicar inputLogin" type="file" name="imagen1">

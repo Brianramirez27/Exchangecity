@@ -115,6 +115,20 @@ function ConsultarDescripcionPublicacion($db,$id_publicacion){
 }
 ?>
 
+<?php 
+    function ConsultarVerificados($db,$id_usuario){
+
+        $sql="SELECT * FROM datos_verificado WHERE FK_dat_codigo_du='$id_usuario'";
+
+        if($datosVerificado=mysqli_query($db,$sql)){
+
+        }else{
+            echo mysqli_error($db);
+        }
+        return $datosVerificado;
+    }
+
+?>
 
 
 

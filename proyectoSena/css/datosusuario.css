@@ -102,9 +102,18 @@
     justify-content: flex-start;
 }
 .actualizarDatos .botonVer{
-    width: 2rem;
-    height: 1rem;
-    background-color: white;
+    width: 4rem;
+    height: 1.3rem;
+    background: linear-gradient(20deg ,black 40% , grey,black );
+    border-radius: 1rem 1rem 1rem;
+    display: flex;
+    justify-content: center;
+    padding-top: 0.2rem ;
+    border: 0.1rem solid black;
+    
+}
+.datosPagina   .inputDatosVer{
+    color: rosybrown;
 }
 
 
