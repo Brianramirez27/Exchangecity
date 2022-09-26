@@ -26,8 +26,9 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
                 <button class="editar">Editar</button>
             </div>
         </div>    
-        <form class="editarPublicacion publicarProductos" action="/PROYECTOSENA/backend/publicacionEditar.php" method="POST">
-            <div class="tituloPublicar">
+        <form class="editarPublicacion  publicarProductos" action="/PROYECTOSENA/backend/publicacionEditar.php" method="POST">
+            <div class="tituloPublicar"> 
+
                 <h1>Actualiazar Producto</h1>
                 <p class="cerrarPublicarProductos">x</p>
             </div>
@@ -38,15 +39,20 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
             <textarea name="descripcion"></textarea>
             <label for="esatdo"> Estado del producto</label>
             <select name="estado">
+
                 <option>Nuevo</option>
+
                 <option>usuado</option>
             </select>
             <label for="fotoPrincipal">Foto Principal</label>
             <input type="file" name="fotoPrincipal">
             <label for="masFotos">Mas Fotos Del Producto</label>
+
             <input type="file" name="fotoPrincipal">
             <input  class="buttomProducto" type="submit" value="editar">
+
             <input  class="buttomProducto" type="submit" value="Eliminar Publicacion">
+            
         </form>
         <script src="/exchangecity/PROYECTOSENA/js/editarPublicacion.js"></script>
         <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
