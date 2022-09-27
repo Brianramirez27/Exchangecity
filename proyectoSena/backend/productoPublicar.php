@@ -84,6 +84,7 @@ if($verificado=mysqli_fetch_assoc($consultaFun)){
            
 }else{
 $_SESSION["noVerificado"]="Por Favor Verificarse Gracias";
+header("location:/exchangecity/proyectosena/includes/publicarProducto.php");
 $error+=1;
 }
 //se comprueba que no hallan errores para guardar la publicacion
