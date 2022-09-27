@@ -25,7 +25,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                         <h3><?php echo $nombreCategoria["cat_tipo"];?></h3>
                         <img src="data:image/JPG;base64,<?php echo base64_encode($publicacionUsuario["pub_img_general"]);?>" />
                         <div class="conterCars">
-                        <a href="/PROYECTOSENA/paginas/descricion.html?pub_cod=<?php echo $publicacionUsuario["pub_codigo"];?>"><h2>producto</h2></a>
+                        <a href="/PROYECTOSENA/paginas/descricion.html"><h2>producto</h2></a>
                         <p><?php echo substr($publicacionUsuario["pub_descripcion"],0,30)."...";?></p>
                         <?php  $estadoPublicacion=ConsultarEstadoPublicacion($db,$publicacionUsuario["FK_est_codigo_pe"]);
                             $nombreEstado=mysqli_fetch_assoc($estadoPublicacion);
@@ -33,9 +33,9 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                         <p class="estado"><?php echo $nombreEstado["est_nombre"];?></p>
                         </div>
                     </div>
-                    <a href="?cod_pub=<?php echo $publicacionUsuario["pub_codigo"];?>">
+                 
                     <button class="editar" ></button>
-                    </a>
+                    
                     
                 </div>
          
@@ -48,7 +48,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 <?php echo isset ($_SESSION["noVerificado"]) ? $_SESSION["noVerificado"]:""; ?>
                 <input  class="inputPublicar inputLogin" type="text" name="tituloPublicacion">
                 <label for="descripcion">Descripcion de la Publicacion</label>
-                <textarea class="inputPublicar inputLogin" name="descripcion"></textarea>
+                <textarea class="inputPublicar inputLogin" name="descripcion"><?php echo substr($publicacionUsuario["pub_descripcion"],0,30)."...";?></textarea>
                 <label for="intereses">intereses de intercambio</label>
                 <textarea class="inputPublicar inputLogin" name="intereses"></textarea>
                 <?php $categorias=ConsultarCategoria($db) ?>
