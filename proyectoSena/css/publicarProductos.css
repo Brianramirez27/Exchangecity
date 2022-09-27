@@ -44,19 +44,26 @@
     border: 0;
     border-bottom: 1px solid white ;
 }
-.publicarProductos input[type="file"]{
+/* .publicarProductos input[type="file"]{
   display: none;
-}
+} */
 .publicarProductos .label{
-    font-size: 14px;
-    font-weight: 600;
-    color: #fff;
-    background-color: #106BA0;
-    display: inline-block;
-   
-    cursor: pointer;
+ width: 7rem;
+ height: 2rem;
+ display: flex;
+ align-items: center;
+ border-radius: 1rem 1rem 1rem;
+ justify-content: center;
+ background: linear-gradient(20deg ,black 40% , grey,black );
+ cursor: pointer;
+ border: 2px solid  white;
     
-  ;
+  
+}
+.img{
+display: none;
+
+
 }
 
 

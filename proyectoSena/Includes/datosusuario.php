@@ -79,7 +79,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                 </div>
                 <div class="actualizarDatos">
                       <input class="actualizarDatos" type="submit" value="Actualizar"> 
-                      <a class="botonVer actualizarDatos"  href="/exchangecity/proyectoSena/Includes/verificacion.php">Validar Usuario</a>           
+                      <a class="botonVer actualizarDatos"  href="/exchangecity/proyectoSena/Includes/verificacion.php">Validar</a>           
                 </div>      
           </div>
       </div>
