@@ -1,20 +1,4 @@
 <?php
-    echo $_POST   ["nombreProducto"];
-    echo "<br>";
-?>
-<?php
-    echo $_POST   ["descripcion"];
-    echo "<br>";
-?>
-<?php
-    echo $_POST   ["estado"];
-    echo "<br>";
-?>
-<?php
-    echo $_POST   ["fotoPrincipal"];
-    echo "<br>";
-?>
-<?php
-    echo $_POST   ["fotoPrincipal"];
-    echo "<br>";
+    $pub_codigo=$_REQUEST["pub_codigo"];
+ echo $pub_codigo;
 ?>
