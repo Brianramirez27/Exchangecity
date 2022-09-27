@@ -25,53 +25,64 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 <textarea class="inputPublicar inputLogin" name="intereses"><?php echo $infoPublicacion["pub_intereses"]?></textarea>
                 <?php $categorias=ConsultarCategoria($db) ?>
                 <label for="categoriaId">Categorias</label>
+
+                <?php $categorias_editar= ConsultarCategoria($db);?>
                 <select name="categoriaId">
-                    <option selected="selected" disabled="diseabled" >Seleccionar</option>
-                  <?php while($categoria=mysqli_fetch_assoc($categorias)): ?>                   
-                    <option><?php echo $categoria["cat_tipo"];?></option>
-                    
-                    <?php endwhile;?>   
+                <?php while($categoria=mysqli_fetch_assoc($categorias_editar)) :?>
+                    <?php if($categoria["cat_codigo"]==$infoPublicacion["FK_cat_codigo_pc"]):?>
+                            <option selected="selected"  value="<?php $categoria["cat_tipo"]?>"><?php echo $categoria["cat_tipo"] ?></option>
+                            <?php else:?>
+                            <option ><?php echo $categoria["cat_tipo"]?></option> 
+                    <?php endif; ?>
+                <?php endwhile;?>
                 </select>
+
+            
                 <label for="estado"> Estado del producto</label>
-                <?php echo isset ($_SESSION["error_Estado"]) ? $_SESSION["error_Estado"]:""; ?>
-                <?php $estados=ConsultarEstado($db);
+                <?php $estados_editar=ConsultarEstado($db);
                  ?>
+
                 <select name="estado">
-                <option selected="selected" disabled="diseabled" >Seleccionar</option>
-                    <?php while($estado=mysqli_fetch_assoc($estados)):?>
-                      <option><?php echo $estado["est_nombre"];?></option> 
-                    <?php endwhile; ?>
+                  <?php while($estado=mysqli_fetch_assoc($estados_editar)):?>
+                    <?php if($estado["est_codigo"]==$infoPublicacion["FK_est_codigo_pe"]):?>
+                            <option selected="selected"  value="<?php echo $estado["est_nombre"]?>"><?php echo $estado["est_nombre"] ?></option>
+                            <?php else:?>
+                            <option ><?php echo $estado["est_nombre"]?></option> 
+                    <?php endif; ?>
+                <?php endwhile;?>
                 </select>
                 <div class="conten_img_editar">
                 <div class="archivo_img">
-                <label class="label"  for="fotoPrincipal">Foto Principal</label>
-                <input class="img inputPublicar inputLogin" type="file" id="fotoPrincipal">
-                <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img_general"]);?>" />
+                    <label class="label"  for="fotoPrincipal">Foto Principal</label>
+                    <input class="img inputPublicar inputLogin" type="file" id="fotoPrincipal">
+                    <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img_general"]);?>" />
                 </div>
                 <div class="archivo_img">
-                <label  class="label" for="imagen1">Imagen 1</label>
-                <input class="img inputPublicar inputLogin" type="file" id="imagen1">
-                <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img1"]);?>" />
+                    <label  class="label" for="imagen1">Imagen 1</label>
+                    <input class="img inputPublicar inputLogin" type="file" id="imagen1">
+                    <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img1"]);?>" />
                 </div>
                 <div class="archivo_img">
-                <label class="label"  for="imagen2">Imagen 2</label>
-                <input class="img inputPublicar inputLogin" type="file" id="imagen2">
-                <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img2"]);?>" />
+                    <label class="label"  for="imagen2">Imagen 2</label>
+                    <input class="img inputPublicar inputLogin" type="file" id="imagen2">
+                    <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img2"]);?>" />
                 </div>
                 <div class="archivo_img">
-                <label class="label"  for="imagen3">Imagen 3</label>
-                <input class="img inputPublicar inputLogin" type="file" id="imagen3">
-                <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img3"]);?>" />
+                    <label class="label"  for="imagen3">Imagen 3</label>
+                    <input class="img inputPublicar inputLogin" type="file" id="imagen3">
+                    <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img3"]);?>" />
                 </div>
                 <div class="archivo_img">
-                <label class="img label"  for="imagen4">Imagen 4</label>
-                <input class="img inputPublicar inputLogin" type="file" id="imagen4">
-                <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img4"]);?>" />
+                    <label class="img label"  for="imagen4">Imagen 4</label>
+                    <input class="img inputPublicar inputLogin" type="file" id="imagen4">
+                    <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img4"]);?>" />
                 </div>
             
                 </div>
-                <input  class="buttomProducto actualizarDatos" type="submit" value="Actualizar Publicacion">
-                <a class="" href="#">Eliminar Publicacion</a>
+                <div class="enviar_eliminar">
+                <input  class="Eliminar" type="submit" value="Actualizar Publicacion">
+                <a class="Eliminar" href="#">Eliminar Publicacion</a></>
+                </div>
             </form>
   <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php"?>
     </section>
