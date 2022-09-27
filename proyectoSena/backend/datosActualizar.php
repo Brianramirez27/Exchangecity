@@ -30,6 +30,13 @@
     $insetar=mysqli_query($db,$sql);
     if($insetar){
         $_SESSION["actualizacion_correcta"]="Los datos se actualizaron correctamente";
+        $_SESSION["login_correcto"]["usu_nombre"]=$nombre;
+        $_SESSION["login_correcto"]["usu_apellido"]=$apellido;
+        $_SESSION["login_correcto"]["usu_correo"]=$correo;
+        $_SESSION["login_correcto"]["usu_documento"]=$documento;
+        $_SESSION["login_correcto"]["usu_contacto"]=$contacto;
+        $_SESSION["login_correcto"]["usu_descripcion"]=$descripcion;
+        $_SESSION["login_correcto"]["usu_red_social"]=$redSocial;
             header("location:/exchangecity/proyectosena/includes/datosusuario.php");
     }else{
         $_SESSION["actualizacion_fallo"]="la actualizacion fallo intentalo de nuevo";
@@ -56,7 +63,8 @@
             
             $insetar1=mysqli_query($db,$sql1);
             if($insetar1){
-                $_SESSION["imagen_correcta"]="la imagen se actualizo correctamente";
+                $_SESSION["imagen_correcta"]="la imagen se actualizo por favor haga login nuevamente para visualizar la imagen";
+                $_SESSION["login_correcto"]["usu_img_perfil"]=$conversion;
                 header("location: /exchangecity/proyectosena/includes/datosusuario.php");
             }else{
                 $_SESSION["imagen_fallo"]="La imagen no se actualizo";
@@ -82,7 +90,8 @@
         WHERE usu_codigo='$id'";
         $insetar2=mysqli_query($db,$sql2);
         if($insetar2){
-            $_SESSION["tipo_correcto"]="la imagen se actualizo correctamente";
+            $_SESSION["tipo_correcto"]="la ciudad se actualizo correctamente";
+            $_SESSION["login_correcto"]["FK_ciu_codigo_uc"]=$ciudad;
             header("location:/exchangecity/proyectosena/includes/datosusuario.php");
         }else{
             $_SESSION["tipo_fallo"]="la imagen se actualizo correctamente";
@@ -92,6 +101,5 @@
   }
    
 
-    
 ?>
 

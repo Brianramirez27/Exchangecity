@@ -44,7 +44,20 @@
     border: 0;
     border-bottom: 1px solid white ;
 }
-
+.publicarProductos input[type="file"]{
+  display: none;
+}
+.publicarProductos .label{
+    font-size: 14px;
+    font-weight: 600;
+    color: #fff;
+    background-color: #106BA0;
+    display: inline-block;
+   
+    cursor: pointer;
+    
+  ;
+}
 
 
 input[type="submit"]{

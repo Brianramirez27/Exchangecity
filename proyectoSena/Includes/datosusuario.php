@@ -46,7 +46,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                             $datosVerificado=mysqli_fetch_assoc($datosVerificados);           
                   ?>
                   <div>
-                  <input class="inputDatosVer inputLogin" type="text" value="<?php if(isset ($datosVerificado)){
+                  <input class="inputDatosVer inputLogin" type="text" disabled="disabled" value="<?php if(isset ($datosVerificado)){
                     echo "VERIFICADO";
                   }else{
                     echo "NO VERIFICADO";
@@ -79,7 +79,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                 </div>
                 <div class="actualizarDatos">
                       <input class="actualizarDatos" type="submit" value="Actualizar"> 
-                      <a class="botonVer actualizarDatos"  href="/exchangecity/proyectoSena/Includes/verificacion.php">Enviar</a>           
+                      <a class="botonVer actualizarDatos"  href="/exchangecity/proyectoSena/Includes/verificacion.php">Validar Usuario</a>           
                 </div>      
           </div>
       </div>

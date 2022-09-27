@@ -40,21 +40,45 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                         <h1>Actualiazar Producto</h1>
                         <p class="cerrarPublicarProductos">x</p>
                     </div>
-                    <label for="nombreProducto">Nombre Producto</label>
-                    <input type="text" name="nombreProducto">
-                    <label for="descripcion">Descicion del producto</label>
-                    <textarea name="descripcion"></textarea>
-                    <label for="esatdo"> Estado del producto</label>
-                    <select name="estado">
-                        <option>Nuevo</option>
-                        <option>usuado</option>
-                    </select>
-                    <label for="fotoPrincipal">Foto Principal</label>
-                    <input type="file" name="fotoPrincipal">
-                    <label for="masFotos">Mas Fotos Del Producto</label>
-                    <input type="file" name="fotoPrincipal">
-                    <input  class="buttomProducto" type="submit" value="editar">
-                    <input  class="buttomProducto" type="submit" value="Eliminar Publicacion">
+                    <label for="tituloPublicacionv">Titulo Publicacion</label>
+                <?php echo isset ($_SESSION["noVerificado"]) ? $_SESSION["noVerificado"]:""; ?>
+                <input  class="inputPublicar inputLogin" type="text" name="tituloPublicacion">
+                <label for="descripcion">Descripcion de la Publicacion</label>
+                <textarea class="inputPublicar inputLogin" name="descripcion"></textarea>
+                <label for="intereses">intereses de intercambio</label>
+                <textarea class="inputPublicar inputLogin" name="intereses"></textarea>
+                <?php $categorias=ConsultarCategoria($db) ?>
+                <label for="categoriaId">Categorias</label>
+                <?php echo isset ($_SESSION["error_Categoria"]) ? $_SESSION["error_Categoria"]:""; ?>
+                <select name="categoriaId">
+                    <option selected="selected" disabled="diseabled" >Seleccionar</option>
+                  <?php while($categoria=mysqli_fetch_assoc($categorias)): ?>                   
+                    <option><?php echo $categoria["cat_tipo"];?></option>
+                    
+                    <?php endwhile;?>   
+                </select>
+                <label for="estado"> Estado del producto</label>
+                <?php echo isset ($_SESSION["error_Estado"]) ? $_SESSION["error_Estado"]:""; ?>
+                <?php $estados=ConsultarEstado($db);
+                 ?>
+                <select name="estado">
+                <option selected="selected" disabled="diseabled" >Seleccionar</option>
+                    <?php while($estado=mysqli_fetch_assoc($estados)):?>
+                      <option><?php echo $estado["est_nombre"];?></option> 
+                    <?php endwhile; ?>
+                </select>
+                <label for="fotoPrincipal">Foto Principal</label>
+                <?php echo isset ($_SESSION["errorImagen"]) ? $_SESSION["errorImagen"]:""; ?>
+                <input class="inputPublicar inputLogin" type="file" name="fotoPrincipal">
+                <label  class="label" for="imagen1">Imagen 1</label>
+                <input class="inputPublicar inputLogin" type="file" id="imagen1">
+                <label for="imagen2">Imagen 2</label>
+                <input class="inputPublicar inputLogin" type="file" name="imagen2">
+                <label for="imagen3">Imagen 3</label>
+                <input class="inputPublicar inputLogin" type="file" name="imagen3">
+                <label for="imagen4">Imagen 4</label>
+                <input class="inputPublicar inputLogin" type="file" name="imagen4">
+                <input  class="buttomProducto actualizarDatos" type="submit" value="Publicar">
                 </form>
         <?php endwhile; ?> 
         <script src="/exchangecity/PROYECTOSENA/js/editarPublicacion.js"></script>

@@ -46,7 +46,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 <label for="fotoPrincipal">Foto Principal</label>
                 <?php echo isset ($_SESSION["errorImagen"]) ? $_SESSION["errorImagen"]:""; ?>
                 <input class="inputPublicar inputLogin" type="file" name="fotoPrincipal">
-                <label for="imagen1">Imagen 1</label>
+                <label  class="label"for="imagen1">Imagen 1</label>
                 <input class="inputPublicar inputLogin" type="file" name="imagen1">
                 <label for="imagen2">Imagen 2</label>
                 <input class="inputPublicar inputLogin" type="file" name="imagen2">
