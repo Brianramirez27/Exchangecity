@@ -38,7 +38,7 @@ $tipoCat=$_REQUEST["tipo"];
           <h3><?php echo $nombreCategoria["cat_tipo"]?></h3>
           <img src="data:image/JPG;base64,<?php echo base64_encode($publicacionCat["pub_img_general"]);?>" />
           <div class="conterCars">
-            <a href="/exchangecity/PROYECTOSENA/includes/descripcion.php?pub_codigo=<?php echo$publicacionCat["pub_codigo"] ?>"><h2><?php echo substr($publicacionCat["pub_titulo"],0,15);?></h2></a>
+            <a href="/exchangecity/PROYECTOSENA/includes/descripcion.php?"><h2><?php echo substr($publicacionCat["pub_titulo"],0,15);?></h2></a>
             <p><?php echo substr($publicacionCat["pub_descripcion"],0,30)."...";?></p>
             <!-- consultamos el estado de las publicaciones y lo monstramos -->
            <?php  $estadoPublicacion= ConsultarEstadoPublicacion($db,$publicacionCat["FK_est_codigo_pe"]);

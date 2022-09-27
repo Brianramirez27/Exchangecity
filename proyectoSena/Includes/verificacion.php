@@ -17,6 +17,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
         <input class="inputVerificado inputLogin" type="file" name="imagenDirreccion">
         <input class="botonVerificar  buttomProducto " type="submit" value="Enviar">
     </form>
+    <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
 </section>
 </section>
 

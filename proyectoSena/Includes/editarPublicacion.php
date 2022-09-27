@@ -13,6 +13,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
   <div class="titulo">
             <h1>Editar Publicaciones</h1>
         </div>
+       
     <section>
         <?php  $datosPublicacion=ConsultarPublicacionesUsuario($db,$_SESSION["login_correcto"]["usu_codigo"]); ?>
         <?php  while($publicacionUsuario=mysqli_fetch_assoc($datosPublicacion)):?>
@@ -24,7 +25,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                         <h3><?php echo $nombreCategoria["cat_tipo"];?></h3>
                         <img src="data:image/JPG;base64,<?php echo base64_encode($publicacionUsuario["pub_img_general"]);?>" />
                         <div class="conterCars">
-                        <a href="/PROYECTOSENA/paginas/descricion.html"><h2>producto</h2></a>
+                        <a href="/PROYECTOSENA/paginas/descricion.html?pub_cod=<?php echo $publicacionUsuario["pub_codigo"];?>"><h2>producto</h2></a>
                         <p><?php echo substr($publicacionUsuario["pub_descripcion"],0,30)."...";?></p>
                         <?php  $estadoPublicacion=ConsultarEstadoPublicacion($db,$publicacionUsuario["FK_est_codigo_pe"]);
                             $nombreEstado=mysqli_fetch_assoc($estadoPublicacion);
@@ -32,7 +33,10 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                         <p class="estado"><?php echo $nombreEstado["est_nombre"];?></p>
                         </div>
                     </div>
-                    <button class="editar">Editar</button>
+                    <a href="?cod_pub=<?php echo $publicacionUsuario["pub_codigo"];?>">
+                    <button class="editar" ></button>
+                    </a>
+                    
                 </div>
          
                 <form class="editarPublicacion  publicarProductos" action="/PROYECTOSENA/backend/publicacionEditar.php" method="POST">
@@ -82,6 +86,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 </form>
         <?php endwhile; ?> 
         <script src="/exchangecity/PROYECTOSENA/js/editarPublicacion.js"></script>
+        
         <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
     </section>
   </section>

@@ -44,10 +44,10 @@
     border: 0;
     border-bottom: 1px solid white ;
 }
-.publicarProductos input[type="file"]{
+/* .publicarProductos input[type="file"]{
   display: none;
-}
-.publicarProductos .label{
+} */
+/* .publicarProductos .label{
     font-size: 14px;
     font-weight: 600;
     color: #fff;
@@ -56,8 +56,8 @@
    
     cursor: pointer;
     
-  ;
-}
+  
+} */
 
 
 input[type="submit"]{
