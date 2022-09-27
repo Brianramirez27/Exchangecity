@@ -78,7 +78,7 @@ if($verificado=mysqli_fetch_assoc($consultaFun)){
         $conversion_img3=addslashes($conversion_img3);
         $conversion_img4=addslashes($conversion_img4);
     }else{
-        $_SESSION["errorImagen"]="porfavor lleno todos los campos de imagen";
+        $_SESSION["errorImagen"]="por favor lleno todos los campos de imagen";
         $error+=1;       
     }
            
