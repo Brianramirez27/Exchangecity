@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="/exchangecity/proyectoSena/css/publicarProductos.css">
   <link rel="stylesheet" href="/exchangecity/proyectoSena/css/editarPublicacion.css">
   <link rel="stylesheet" href="/exchangecity/proyectoSena/css/descripcion.css">
+  <link rel="stylesheet" href="/exchangecity/proyectoSena/css/avisoEliminacion.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
  
   <title>Contenido</title>

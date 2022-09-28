@@ -14,6 +14,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
             <h1>Editar Publicaciones</h1>
         </div>
     <section>
+        <?php echo isset($_SESSION["publicacion_eliminada"]) ?$_SESSION["publicacion_eliminada"]:"";?> 
         <?php  $datosPublicacion=ConsultarPublicacionesUsuario($db,$_SESSION["login_correcto"]["usu_codigo"]); ?>
         <?php  while($publicacionUsuario=mysqli_fetch_assoc($datosPublicacion)):?>
             <?php $categoriaPublicacion=ConsultarCategoriaPublicacion($db,$publicacionUsuario["FK_cat_codigo_pc"]) ;
@@ -33,7 +34,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                         </div>
                     </div>
                    
-                    <a class="editar" href="/exchangecity/proyectoSena/Includes/editarPublicacion.php?pub_codigo=<?php echo $publicacionUsuario["pub_codigo"] ?>" >Editar</a>
+                    <a class="editar" href="/exchangecity/proyectoSena/Includes/editarPublicacion.php?pub_codigo=<?php echo $publicacionUsuario["pub_codigo"] ?>">Editar</a>
                    
                 </div>
                
@@ -47,6 +48,8 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
 
  
   <?php 
-  include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
+  include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php";
+  unset($_SESSION["publicacion_eliminada"]);
+  
   
   ?>

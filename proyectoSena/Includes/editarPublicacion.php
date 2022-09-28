@@ -81,7 +81,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 </div>
                 <div class="enviar_eliminar">
                 <input  class="Eliminar" type="submit" value="Actualizar Publicacion">
-                <a class="Eliminar" href="#">Eliminar Publicacion</a></>
+                <a class="Eliminar" href="/exchangecity/proyectoSena/Includes/eliminarPublicacion.php?pub_codigo=<?php echo $_REQUEST["pub_codigo"] ?>">Eliminar Publicacion</a></>
                 </div>
             </form>
   <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php"?>

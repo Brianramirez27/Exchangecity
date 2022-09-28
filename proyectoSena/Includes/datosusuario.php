@@ -79,7 +79,8 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
                 </div>
                 <div class="actualizarDatos">
                       <input class="actualizarDatos" type="submit" value="Actualizar"> 
-                      <a class="botonVer actualizarDatos"  href="/exchangecity/proyectoSena/Includes/verificacion.php">Validar</a>           
+                      <a class="botonVer actualizarDatos"  href="/exchangecity/proyectoSena/Includes/verificacion.php">Validar</a>   
+                      <a class="botonVer actualizarDatos"  href="/exchangecity/proyectoSena/Includes/eliminarCuenta.php?usu_codigo=<?php echo $_SESSION["login_correcto"]["usu_codigo"]?>">Eliminar Cuenta</a>        
                 </div>      
           </div>
       </div>
