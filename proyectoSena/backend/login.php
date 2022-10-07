@@ -18,8 +18,7 @@
    if(isset($datos_usuario)){
        $verifi_password=password_verify($contraseña, $datos_usuario["usu_password"]);
     /*verificamos que la coontraseña que ingreso este guardada */
-        if( $contraseña==$verifi_password){
-           
+        if($contraseña==$verifi_password){
             $_SESSION["login_correcto"]=$datos_usuario;
             
         }else{
@@ -28,6 +27,7 @@
         }
 
     }else{
+        $error+=1;
        $_SESSION["correo_erroneo"]="correo no registrado o campo vacio";
    }
    /*se comprueba que el campo contraseña que no sea vacio */
