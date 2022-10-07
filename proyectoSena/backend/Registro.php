@@ -72,6 +72,7 @@ if(isset($_POST)){
           if ($tipo =="Administrador" && $codigo =="2506"){
                $tipo=1;
                $codigo=$codigo;
+               
           }elseif($tipo =="Usuario"){
                $tipo = 2;      
           }else{
@@ -85,7 +86,7 @@ if(isset($_POST)){
      /* si no hay errores Se crifra la contrasena*/ 
         $password_segura=password_hash("$contraseña",PASSWORD_BCRYPT,['cost'=>4]);
         /* depues de que no halla errores a hora si se guardan los datos en bd*/
-        $add_usuario = "INSERT INTO usuario  VALUES(NULL,'$nombre','$apellido','$correo','$password_segura',NULL,'$tipo',NULL,NULL,NULL,NULL,NULL,NULL,NULL)"; 
+        $add_usuario = "INSERT INTO usuario  VALUES(NULL,'$nombre','$apellido','$correo','$password_segura',NULL,'$tipo',NULL,NULL,NULL,NULL,NULL,NULL)"; 
         $guardar_usurios = mysqli_query($db,$add_usuario);
 
      /* se  comprueba si el registro es corrrecto o fallo y se crea una secion para mostrarla   */

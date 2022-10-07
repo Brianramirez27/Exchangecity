@@ -22,7 +22,6 @@
            
             $_SESSION["login_correcto"]=$datos_usuario;
             
-
         }else{
             $error+=1;
             $_SESSION["contrasena_mala"]="contraseña incorrecta ";
