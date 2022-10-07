@@ -12,9 +12,11 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
   <section id="container">
   <div class="titulo">
             <h1>Editar Publicaciones</h1>
+            
         </div>
     <section>
-        <?php echo isset($_SESSION["publicacion_eliminada"]) ?$_SESSION["publicacion_eliminada"]:"";?> 
+    <h2 class="eliminado" ><?php echo isset($_SESSION["publicacion_eliminada"]) ?$_SESSION["publicacion_eliminada"]:"";?></h2>
+    <h2 class="eliminado" ><?php echo isset($_SESSION["pub_actualizada"]) ?$_SESSION["pub_actualizada"]:"";?></h2>
         <?php  $datosPublicacion=ConsultarPublicacionesUsuario($db,$_SESSION["login_correcto"]["usu_codigo"]); ?>
         <?php  while($publicacionUsuario=mysqli_fetch_assoc($datosPublicacion)):?>
             <?php $categoriaPublicacion=ConsultarCategoriaPublicacion($db,$publicacionUsuario["FK_cat_codigo_pc"]) ;
@@ -25,7 +27,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                         <h3><?php echo $nombreCategoria["cat_tipo"];?></h3>
                         <img src="data:image/JPG;base64,<?php echo base64_encode($publicacionUsuario["pub_img_general"]);?>" />
                         <div class="conterCars">
-                        <a href="/PROYECTOSENA/paginas/descricion.html"><h2>producto</h2></a>
+                        <a href="/exchangecity/PROYECTOSENA/includes/descripcion.php?pub_codigo=<?php echo$publicacionUsuario["pub_codigo"] ?>"><h2><?php echo substr($publicacionUsuario["pub_titulo"],0,15);?></h2></a>
                         <p><?php echo substr($publicacionUsuario["pub_descripcion"],0,30)."...";?></p>
                         <?php  $estadoPublicacion=ConsultarEstadoPublicacion($db,$publicacionUsuario["FK_est_codigo_pe"]);
                             $nombreEstado=mysqli_fetch_assoc($estadoPublicacion);

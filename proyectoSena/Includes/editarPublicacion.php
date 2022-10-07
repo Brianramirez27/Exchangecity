@@ -17,7 +17,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
             $infoPublicacion=mysqli_fetch_assoc($detallesPublicacion);
         ?>
     <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/publicacionEditar.php?pub_codigo=<?php echo $_REQUEST["pub_codigo"];?>" enctype="multipart/form-data" method="POST">
-                <label for="tituloPublicacionv">titulo</label>
+                <label for="tituloPublicacion">titulo</label>
                 <input  class="inputPublicar inputLogin" type="text" name="tituloPublicacion" value="<?php echo $infoPublicacion["pub_titulo"] ?>">
                 <label for="descripcion">Descripcion de la Publicacion</label>
                 <textarea class="inputPublicar inputLogin" name="descripcion" ><?php echo $infoPublicacion["pub_descripcion"]?></textarea>
@@ -54,27 +54,27 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
                 <div class="conten_img_editar">
                 <div class="archivo_img">
                     <label class="label"  for="fotoPrincipal">Foto Principal</label>
-                    <input class="img inputPublicar inputLogin" type="file" id="fotoPrincipal">
+                    <input class="img inputPublicar inputLogin" type="file" name="fotoPrincipal">
                     <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img_general"]);?>" />
                 </div>
                 <div class="archivo_img">
                     <label  class="label" for="imagen1">Imagen 1</label>
-                    <input class="img inputPublicar inputLogin" type="file" id="imagen1">
+                    <input class="img inputPublicar inputLogin" type="file" name="imagen1">
                     <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img1"]);?>" />
                 </div>
                 <div class="archivo_img">
                     <label class="label"  for="imagen2">Imagen 2</label>
-                    <input class="img inputPublicar inputLogin" type="file" id="imagen2">
+                    <input class="img inputPublicar inputLogin" type="file" name="imagen2">
                     <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img2"]);?>" />
                 </div>
                 <div class="archivo_img">
                     <label class="label"  for="imagen3">Imagen 3</label>
-                    <input class="img inputPublicar inputLogin" type="file" id="imagen3">
+                    <input class="img inputPublicar inputLogin" type="file" name="imagen3">
                     <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img3"]);?>" />
                 </div>
                 <div class="archivo_img">
                     <label class="img label"  for="imagen4">Imagen 4</label>
-                    <input class="img inputPublicar inputLogin" type="file" id="imagen4">
+                    <input class="img inputPublicar inputLogin" type="file" name="imagen4">
                     <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($infoPublicacion["pub_img4"]);?>" />
                 </div>
             
