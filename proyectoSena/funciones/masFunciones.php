@@ -150,4 +150,8 @@ function ConsultarPublicacionesUsuario($db,$id_usuario){
 
 
 
+
+
+
+
  

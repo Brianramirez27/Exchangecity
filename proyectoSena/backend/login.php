@@ -19,12 +19,22 @@
        $verifi_password=password_verify($contraseña, $datos_usuario["usu_password"]);
     /*verificamos que la coontraseña que ingreso este guardada */
         if($contraseña==$verifi_password){
+            
             $_SESSION["login_correcto"]=$datos_usuario;
             
+            $tipo=$_SESSION["login_correcto"]["FK_rol_codigo_ur"];
+            if($tipo==1){
+                $_SESSION["usuario_administrador"]=$_SESSION["login_correcto"];
+            }else{
+                $_SESSION["usuario"]=$_SESSION["login_correcto"];
+            }
+
+        
         }else{
             $error+=1;
             $_SESSION["contrasena_mala"]="contraseña incorrecta ";
         }
+        
 
     }else{
         $error+=1;
@@ -43,6 +53,7 @@ if(!$error==0){
 }else{
     header("location: ../index.php");
 }
+    
 
 }
 

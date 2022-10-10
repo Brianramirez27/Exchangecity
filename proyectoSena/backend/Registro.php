@@ -5,7 +5,7 @@ if(isset($_POST)){
      /* si existe post se hace la conexion ala base de datos*/
      include_once "/wamp64/www/exchangecity/proyectoSena/funciones/conexionDB.php";
      // se guardan los valores que recibimos  en variables para despues comprobarlos
-
+     
      $nombre= isset ($_POST["nombre"]) ? $_POST["nombre"]:false;
      $apellido= isset ($_POST["apellido"]) ? $_POST["apellido"]:false;
      $correo=  isset( $_POST["correo"]) ? $_POST["correo"]:false;
@@ -92,6 +92,9 @@ if(isset($_POST)){
      /* se  comprueba si el registro es corrrecto o fallo y se crea una secion para mostrarla   */
       if($guardar_usurios){
            $_SESSION["registro_completado"] = "el registro se ha completado con exito";
+
+           
+           
       }else{
            $_SESSION["registro_fallo"] =" el registro  fallo";
            

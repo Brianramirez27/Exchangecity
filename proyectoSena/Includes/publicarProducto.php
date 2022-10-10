@@ -68,5 +68,13 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
   
   ?>
 
+<?php
+  unset($_SESSION["noVerificado"]);
+  unset($_SESSION["error_Categoria"]);
+  unset($_SESSION["error_Estado"]);
+  unset($_SESSION["errorImagen"]);
+  
+?>
+
  
   
