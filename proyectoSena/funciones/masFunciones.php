@@ -144,6 +144,28 @@ function ConsultarPublicacionesUsuario($db,$id_usuario){
     }
     return $datosPublicacionesUsuario;
 }
+
+
+
+function ConsultarExisteUsuario($db,$cod_usuario){
+    $sql="SELECT * FROM datos_verificado where FK_dat_codigo_du= '$cod_usuario' ";
+    if($existeUsuario=mysqli_query($db,$sql)){
+        return $existeUsuario;
+    }else{
+        echo mysqli_error($db);
+    }
+    
+}
+
+function ConsultarExisteProveedor($db,$cod_proveedor){
+    $sql="SELECT * FROM datos_verificado where FK_dat_codigo_du= '$cod_proveedor'";
+    if($existeProveedor=mysqli_query($db,$sql)){
+        return $existeProveedor;
+    }else{
+        echo mysqli_error($db);
+    }
+   
+}
 ?>
 
 

@@ -89,6 +89,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
     </div>
     <section>
      <img src="" alt="">
+     <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php" ?>
     </section>
   </section>
   <!--limpiamos los flotados del aside -->
