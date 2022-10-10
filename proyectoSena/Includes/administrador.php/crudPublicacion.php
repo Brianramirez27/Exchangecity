@@ -20,6 +20,7 @@ $consulta=mysqli_query($db,$sql);
     <div class="titulo">
         <h1>Publicaciones Registradas</h1>
     </div>
+    <h2 class="eliminado" ><?php echo isset($_SESSION["publicacion_eliminada"]) ?$_SESSION["publicacion_eliminada"]:"";?></h2>
     <section >
     <div class="crudUsu">
         <table>
@@ -44,7 +45,7 @@ $consulta=mysqli_query($db,$sql);
                 <th class="datoCrudUsu"><?php echo $row["FK_dat_codigo_pd_usu"] ?></th>
                 <th class="datoCrudUsu"><?php echo $row["FK_cat_codigo_pc"] ?></th>
                 <th class="datoCrudUsu"><?php echo $row["FK_est_codigo_pe"] ?></th>
-                <th class="datoCrudUsu"><a href="/exchangecity/proyectoSena/backend/eliminarPubCrud.php?pub_codigo=<?php echo $row["pub_codigo"] ?>">Eliminar</a></th>
+                <th class="datoCrudUsu"><a href="/exchangecity/proyectoSena/backend/administrador.php/eliminarPubCrud.php?pub_codigo=<?php echo $row["pub_codigo"] ?>">Eliminar</a></th>
                 
             </tr>
             <?php endwhile;?>
@@ -62,6 +63,9 @@ $consulta=mysqli_query($db,$sql);
   <!--limpiamos los flotados del aside -->
   <div style="clear: both"></div>
 
+  <?php 
+      unset($_SESSION["publicacion_eliminada"]);
+  ?>
 
 
   

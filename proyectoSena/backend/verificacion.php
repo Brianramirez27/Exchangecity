@@ -2,21 +2,24 @@
     include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/conexionDB.php";
     $id=$_SESSION["login_correcto"]["usu_codigo"];
     $imgCedula= isset ($_FILES["imagenCedula"]["tmp_name"]) ? $_FILES["imagenCedula"]["tmp_name"]:false;
-    $imgDirreccion= isset ($_FILES["imagenDirreccion"]["tmp_name"]) ? $_FILES["imagenDirreccion"]["tmp_name"]:false;
+    $imgDireccion= isset ($_FILES["imagenDireccion"]["tmp_name"]) ? $_FILES["imagenDireccion"]["tmp_name"]:false;
      var_dump($imgCedula);
 
-    if($imgCedula && $imgDirreccion){
+    if($imgCedula && $imgDireccion){
        
         $tamaño_img= $_FILES["imagenCedula"]["size"];
-        $tamaño_img1= $_FILES["imagenDirreccion"]["size"];
+        $tamaño_img1= $_FILES["imagenDireccion"]["size"];
 
         $leer_imgCedula= fopen($imgCedula,"r");
-        $leer_imgDirreccion= fopen($imgDirreccion,"r");
+        $leer_imgDireccion= fopen($imgDireccion,"r");
 
-        $convercion=$imgC=fread($leer_imgCedula,$tamaño_img);
-        $convercion=$imgD=fread($leer_imgDirreccion,$tamaño_img1);
+        $convercion1=fread($leer_imgCedula,$tamaño_img);
+        $convercion2=fread($leer_imgDireccion,$tamaño_img1);
 
-        $add_verificacion="INSERT INTO datos_verificado VALUES('$id','$imgCedula','$imgDirreccion')";
+        $convercion1=addslashes($convercion1);
+        $convercion2=addslashes($convercion2);
+
+        $add_verificacion="INSERT INTO datos_verificado VALUES('$id','$convercion1','$convercion2')";
 
        if (mysqli_query($db,$add_verificacion)){
           echo "se inserto en la base de datos";

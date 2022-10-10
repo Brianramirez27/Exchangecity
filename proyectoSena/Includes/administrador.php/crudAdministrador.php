@@ -5,8 +5,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
 ?>
 <?php 
-$sql="SELECT usu_codigo,usu_nombre,usu_apellido,usu_correo,usu_documento,
-FK_rol_codigo_ur,FK_ciu_codigo_uc FROM usuario";
+$sql="SELECT *FROM usuario WHERE FK_rol_codigo_ur='1'";
 
 $consulta=mysqli_query($db,$sql);
 
@@ -18,8 +17,9 @@ $consulta=mysqli_query($db,$sql);
 
   <section id="container">
     <div class="titulo">
-        <h1>Usuarios Registrados</h1>
+        <h1>Administradores Registrados</h1>
     </div>
+    <h2 class="eliminado" ><?php echo isset($_SESSION["eliminar_adm"]) ?$_SESSION["eliminar_adm"]:"";?></h2>
     <section >
     <div class="crudUsu">
         <table>
@@ -44,7 +44,7 @@ $consulta=mysqli_query($db,$sql);
                 <th class="datoCrudUsu"><?php echo $row["usu_documento"] ?></th>
                 <th class="datoCrudUsu"><?php echo $row["FK_rol_codigo_ur"] ?></th>
                 <th class="datoCrudUsu"><?php echo $row["FK_ciu_codigo_uc"] ?></th>
-                <th class="datoCrudUsu"><a href="/exchangecity/proyectoSena/backend/eliminarUsuCrud.php?usu_codigo=<?php echo $row["usu_codigo"] ?>">Eliminar</a></th>
+                <th class="datoCrudUsu"><a href="/exchangecity/proyectoSena/backen/administrador.php/administradorCrud.php?usu_codigo=<?php echo $row["usu_codigo"]?>">Eliminar</a></th>
                 
             </tr>
             <?php endwhile;?>
@@ -61,3 +61,7 @@ $consulta=mysqli_query($db,$sql);
   ?>
   <!--limpiamos los flotados del aside -->
   <div style="clear: both"></div>
+
+  <?php 
+      unset($_SESSION["eliminar_adm"]);
+  ?>

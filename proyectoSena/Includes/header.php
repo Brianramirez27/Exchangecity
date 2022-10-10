@@ -35,19 +35,29 @@
     <div class="iniciarSesion">
     
       <input class="buscador" type="text" value="Buscar"/> 
-      <?php  if(isset($_SESSION["login_correcto"])):?>
+      <?php  if(isset($_SESSION["usuario"])):?>
           <div class="bienvenido">
-              <h3>Bienvenido  <?php echo $_SESSION["login_correcto"]["usu_nombre"] ." ".$_SESSION["login_correcto"]["usu_apellido"]?></h3>
+              <h3>Bienvenido  <?php echo $_SESSION["usuario"]["usu_nombre"] ." ".$_SESSION["usuario"]["usu_apellido"]?></h3>
           </div>
+         
           
           <a class="cerrar_session" href="/exchangecity/proyectoSena/backend/cerrar_session.php" >cerra  sesion</a>
       <?php endif; ?>
+      <?php if(isset($_SESSION["usuario_administrador"])):?>
+            <div class="bienvenido">
+            <h3>Bienvenido Administrador <?php echo $_SESSION["usuario_administrador"]["usu_nombre"] ." ".$_SESSION["usuario_administrador"]["usu_apellido"]?></h3>
+            </div>
+
+            <a class="cerrar_session" href="/exchangecity/proyectoSena/backend/cerrar_session.php" >cerra  sesion</a>
+
+          <?php endif; ?>
+          
       
       
 
       
 
-      <?php if(!isset($_SESSION["login_correcto"])): ?> 
+      <?php if(!isset($_SESSION["usuario"]) && !isset($_SESSION["usuario_administrador"])): ?> 
         <div class="registro_iniciar">
           <a class="inicioSesion" href="/exchangecity/proyectoSena/Includes/login.php">Login</a>
           <a  class="registroUsuario" href="/exchangecity/proyectoSena/Includes/registro.php">Registrarse</a>
