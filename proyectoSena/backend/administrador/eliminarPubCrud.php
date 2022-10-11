@@ -6,7 +6,7 @@ $sql2="DELETE FROM publicacion WHERE pub_codigo='$pub_codigo'";
 if(mysqli_query($db,$sql2)){
     
     $_SESSION["publicacion_eliminada"]="la publicacion se elimino correctamente";
-    header("location: /exchangecity/proyectosena/includes/administrador.php/crudPublicacion.php");
+    header("location: /exchangecity/proyectosena/includes/administrador/crudPublicacion.php");
 }else{
         echo "error".mysqli_error($db) ;
 }

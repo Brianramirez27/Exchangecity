@@ -26,7 +26,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
       <input class="img inputPublicar inputLogin" type="file" name="imagen3">
       <label class="img label" for="imagen4">Imagen 4</label>
       <input class="img inputPublicar inputLogin" type="file" name="imagen4">
-      <input class=" buttomProducto actualizarDatos" type="submit" value="Crear Publicacion">
+      <input class=" buttomProducto actualizarDatos" type="submit" value="Crear Intercambio">
     </form>
 
 
