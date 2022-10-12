@@ -16,6 +16,10 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
   <h2 class="eliminado" ><?php echo isset($_SESSION["intercambio_not_creado"]) ?$_SESSION["intercambio_not_creado"]:"";?></h2>
   <section>
     <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/intercambio/crearIntercambio.php" enctype="multipart/form-data" method="POST">
+    <?php echo isset($_SESSION["publicacion_not_dueño"]) ?  $_SESSION["publicacion_not_dueño"]:""; ?>
+    <?php echo isset($_SESSION["publicacion_not_existe"]) ?  $_SESSION["publicacion_not_existe"]:""; ?>
+    <label class="label" for="cod_publicacion">codigo Publicacion</label>
+      <input class="img inputPublicar inputLogin" type="text" name="cod_publicacion" >
       <label class="label" for="cod_propietario">codigo Propietario Publicacion</label>
       <input class="img inputPublicar inputLogin" type="text" name="cod_propietario" >
       <?php echo isset($_SESSION["propietario_not_existe"]) ? $_SESSION["propietario_not_existe"]:""; ?>
@@ -31,6 +35,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
       <input class="img inputPublicar inputLogin" type="file" name="imagen3">
       <label class="img label" for="imagen4">Imagen 4</label>
       <input class="img inputPublicar inputLogin" type="file" name="imagen4">
+
       <input class=" buttomProducto actualizarDatos" type="submit" value="Crear Intercambio">
     </form>
 
@@ -49,4 +54,8 @@ include_once "/wamp64/www/exchangecity/proyectoSena/Includes/footer.php"
 <?php
   unset($_SESSION["usuario_not_existe"]);
   unset($_SESSION["propietario_not_existe"]);
+  // unset($_SESSION["intercambio_creado"]);
+  unset($_SESSION["intercambio_not_creado"]);
+  unset($_SESSION["publicacion_not_dueño"]);
+  unset($_SESSION["publicacion_not_existe"]);
 ?>

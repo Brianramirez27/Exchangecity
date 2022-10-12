@@ -157,8 +157,8 @@ function ConsultarExisteUsuario($db,$cod_usuario){
     
 }
 
-function ConsultarExisteProveedor($db,$cod_proveedor){
-    $sql="SELECT * FROM datos_verificado where FK_dat_codigo_du= '$cod_proveedor'";
+function ConsultarExisteProveedor($db,$cod_verificado){
+    $sql="SELECT * FROM datos_verificado where FK_dat_codigo_du='$cod_verificado'";
     if($existeProveedor=mysqli_query($db,$sql)){
         return $existeProveedor;
     }else{
@@ -166,7 +166,23 @@ function ConsultarExisteProveedor($db,$cod_proveedor){
     }
    
 }
+
+function IntercambioUsuarioProveedor($db,$cod_usuario){
+    $sql="SELECT * FROM intercambio where FK_dat_codigo_id_usu='$cod_usuario'";
+    $existeUsuario=mysqli_query($db,$sql);
+    $existeInter=mysqli_fetch_assoc($existeUsuario);
+
+    if(!isset($existeInter)){
+        return $existeInter;
+    }else{
+        echo mysqli_error($db);
+    }
+}
+
 ?>
+
+
+
 
 
 
