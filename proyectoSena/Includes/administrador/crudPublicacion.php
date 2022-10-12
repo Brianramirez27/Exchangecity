@@ -6,7 +6,7 @@ include_once "/wamp64/www/exchangecity/proyectoSena/funciones/masFunciones.php";
 ?>
 <?php 
 $sql="SELECT pub_codigo,pub_titulo,pub_descripcion,pub_intereses,FK_dat_codigo_pd_usu,
-FK_cat_codigo_pc ,FK_est_codigo_pe FROM publicacion";
+FK_cat_codigo_pc ,FK_est_codigo_pe,pub_img_general,pub_img1,pub_img2,pub_img3,pub_img4  FROM publicacion";
 
 $consulta=mysqli_query($db,$sql);
 
@@ -33,6 +33,12 @@ $consulta=mysqli_query($db,$sql);
                 <th class="datoCrudUsu">Verificado</th>
                 <th class="datoCrudUsu">Categoria</th>
                 <th class="datoCrudUsu">Estado</th>
+                <th class="datoCrudUsu">Imagen Principal</th>
+                <th class="datoCrudUsu">Imagen 1</th>
+                <th class="datoCrudUsu">Imagen 2</th>
+                <th class="datoCrudUsu">Imagen 3</th>
+                <th class="datoCrudUsu">Imagen 4</th>
+
                 <th class="datoCrudUsu">Opciones</th>
 
             </tr>
@@ -45,7 +51,12 @@ $consulta=mysqli_query($db,$sql);
                 <th class="datoCrudUsu"><?php echo $row["FK_dat_codigo_pd_usu"] ?></th>
                 <th class="datoCrudUsu"><?php echo $row["FK_cat_codigo_pc"] ?></th>
                 <th class="datoCrudUsu"><?php echo $row["FK_est_codigo_pe"] ?></th>
-                <th class="datoCrudUsu"><a href="/exchangecity/proyectoSena/backend/administrador.php/eliminarPubCrud.php?pub_codigo=<?php echo $row["pub_codigo"] ?>">Eliminar</a></th>
+                <th class="datoCrudUsu"><img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($row["pub_img_general"]);?>" /></</th>
+                <th class="datoCrudUsu"><img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($row["pub_img1"]);?>" /></</th>
+                <th class="datoCrudUsu"><img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($row["pub_img2"]);?>" /></</th>
+                <th class="datoCrudUsu"><img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($row["pub_img3"]);?>" /></</th>
+                <th class="datoCrudUsu"><img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($row["pub_img4"]);?>" /></</th>
+                <th class="datoCrudUsu"><a class="crudBoton" href="/exchangecity/proyectoSena/backend/administrador/eliminarPubCrud.php?pub_codigo=<?php echo $row["pub_codigo"] ?>">Eliminar</a></th>
                 
             </tr>
             <?php endwhile;?>

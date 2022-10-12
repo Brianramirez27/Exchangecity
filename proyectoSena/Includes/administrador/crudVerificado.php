@@ -39,7 +39,7 @@ $consulta=mysqli_query($db,$sql);
                 <th class="datoCrudUsu"><?php echo $row["FK_dat_codigo_du"] ?></th>
                 <th class="datoCrudUsu"> <img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($row["dat_img_cedula"]);?>" /></th>
                 <th class="datoCrudUsu"><img class="img_editar" src="data:image/JPG;base64,<?php echo base64_encode($row["dat_direccion"]);?>" /></th>
-                <th class="datoCrudUsu"><a href="/exchangecity/proyectoSena/backend/administrador.php/verificadoCrud.php?usu_codigo=<?php echo $row["FK_dat_codigo_du"] ?>">Eliminar</a></th>
+                <th class="datoCrudUsu"><a class="crudBoton" href="/exchangecity/proyectoSena/backend/administrador/verificadoCrud.php?usu_codigo=<?php echo $row["FK_dat_codigo_du"] ?>">Eliminar</a></th>
                 
             </tr>
             <?php endwhile;?>

@@ -12,10 +12,18 @@
     justify-content:space-around;
     padding: 0.4rem;
     border: 0.1rem solid var(--logo);
-    width: 70%;
+    width: auto;
+     
    
 }
 .datoCrudUsu{
     padding: 0.4rem;
-    border: 0.1rem solid var(--logo);     
+    border: 0.1rem solid var(--logo);  
+}
+.crudBoton{
+    text-decoration: none; 
+    background-color: var(--letra);
+    color: var(--cars);
+    border: 0.2rem var(--cars);
+    margin: var(--cars);
 }
