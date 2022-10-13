@@ -179,6 +179,10 @@ function IntercambioUsuarioProveedor($db,$cod_usuario){
     }
 }
 
+function ConsultarDireccionUsuPro($db,$cod_usuario){
+    $sql="";
+}
+
 ?>
 
 
