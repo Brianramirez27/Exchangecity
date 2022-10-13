@@ -10,7 +10,7 @@ $imagen2 = isset($_FILES["imagen2"]["tmp_name"]) ? $_FILES["imagen2"]["tmp_name"
 $imagen3 = isset($_FILES["imagen3"]["tmp_name"]) ? $_FILES["imagen3"]["tmp_name"]:false;
 $imagen4 = isset($_FILES["imagen4"]["tmp_name"]) ? $_FILES["imagen4"]["tmp_name"]:false;
 $error=array();
-var_dump($cod_propietario);
+
 
 if($cod_publicacion){
     $sql2="SELECT * FROM  publicacion where pub_codigo='$cod_publicacion'";
@@ -98,7 +98,8 @@ if(count($error)==0 && $existePub==true){
     $crear_intercambio=mysqli_query($db,$sql1);
 
     if($crear_intercambio){
-        $_SESSION["intercambio_creado"]="el intercambio se creo correctamente por favor verifique en el boton de opciones la opcion de proceso 'Intercambio en procesos'";
+        $_SESSION["intercambio_creado_mensaje"]="el intercambio se creo correctamente puede consultar el proceso en opciones";
+        $_SESSION["intercambio_creado"]="intercambio Creado";
         header("location:/exchangecity/proyectoSena/Includes/intercambio/2Intercambio.php");
     }else{
         $_SESSION["intercambio_not_creado"]="el intercambio no se creo correctamente ";
