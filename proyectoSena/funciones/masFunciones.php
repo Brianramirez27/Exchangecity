@@ -168,14 +168,14 @@ function ConsultarExisteProveedor($db,$cod_verificado){
 }
 
 function IntercambioUsuarioProveedor($db,$cod_usuario){
-    $sql="SELECT * FROM intercambio where FK_dat_codigo_id_usu='$cod_usuario'";
+    $sql="SELECT * FROM intercambio where (FK_dat_codigo_id_usu='$cod_usuario') or (FK_dat_codigo_id_pro='$cod_usuario')";
     $existeUsuario=mysqli_query($db,$sql);
     $existeInter=mysqli_fetch_assoc($existeUsuario);
 
-    if(!isset($existeInter)){
+    if(isset($existeInter)){
         return $existeInter;
     }else{
-        echo mysqli_error($db);
+       
     }
 }
 

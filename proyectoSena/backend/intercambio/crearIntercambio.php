@@ -98,7 +98,7 @@ if(count($error)==0 && $existePub==true){
 
     if($crear_intercambio){
         $_SESSION["intercambio_creado"]="el intercambio se creo correctamente por favor verifique en el boton de opciones la opcion de proceso 'Intercambio en procesos'";
-        header("location:/exchangecity/proyectoSena/Includes/intercambio/crearIntercambio.php");
+        header("location:/exchangecity/proyectoSena/Includes/intercambio/2Intercambio.php");
     }else{
         $_SESSION["intercambio_not_creado"]="el intercambio no se creo correctamente ";
         echo "no se creo el intercambio". mysqli_error($db);

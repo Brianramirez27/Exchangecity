@@ -12,7 +12,6 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
   <div class="titulo">
     <h1>Crear Intercambio</h1>
   </div>
-  <h2 class="eliminado" ><?php echo isset($_SESSION["intercambio_creado"]) ?$_SESSION["intercambio_creado"]:"";?></h2>
   <h2 class="eliminado" ><?php echo isset($_SESSION["intercambio_not_creado"]) ?$_SESSION["intercambio_not_creado"]:"";?></h2>
   <section>
     <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/intercambio/crearIntercambio.php" enctype="multipart/form-data" method="POST">
@@ -21,7 +20,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
     <label class="label" for="cod_publicacion">codigo Publicacion</label>
       <input class="img inputPublicar inputLogin" type="text" name="cod_publicacion" >
       <label class="label" for="cod_propietario">codigo Propietario Publicacion</label>
-      <input class="img inputPublicar inputLogin" type="text" name="cod_propietario" >
+      <input class="img inputPublicar inputLogin" type="text" disabled="disabled" name="cod_propietario"  value="<?php echo $_SESSION["login_correcto"]["usu_codigo"];  ?>">
       <?php echo isset($_SESSION["propietario_not_existe"]) ? $_SESSION["propietario_not_existe"]:""; ?>
       <label class="label" for="cod_usuario">codigo usuario Implicado</label>
       <input class="img inputPublicar inputLogin" type="text" name="cod_usuario">

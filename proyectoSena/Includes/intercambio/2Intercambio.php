@@ -10,6 +10,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
   <div class="titulo">
     <h1>Segundo Intercambio</h1>
   </div>
+  <h2 class="eliminado" ><?php echo isset($_SESSION["intercambio_creado"]) ?$_SESSION["intercambio_creado"]:"";?></h2>
   <section>
     <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/intercambio/crearIntercambio.php" enctype="multipart/form-data" method="POST">
       <label class="label" for="imagen1">Imagen 1</label>
