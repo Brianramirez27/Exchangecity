@@ -10,6 +10,7 @@ $imagen2 = isset($_FILES["imagen2"]["tmp_name"]) ? $_FILES["imagen2"]["tmp_name"
 $imagen3 = isset($_FILES["imagen3"]["tmp_name"]) ? $_FILES["imagen3"]["tmp_name"]:false;
 $imagen4 = isset($_FILES["imagen4"]["tmp_name"]) ? $_FILES["imagen4"]["tmp_name"]:false;
 $error=array();
+var_dump($cod_propietario);
 
 if($cod_publicacion){
     $sql2="SELECT * FROM  publicacion where pub_codigo='$cod_publicacion'";
