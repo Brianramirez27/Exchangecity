@@ -10,15 +10,14 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
     <h1>Segundo Intercambio</h1>
   </div>
   <h2 class="eliminado" ><?php echo isset($_SESSION["intercambio_creado_mensaje"]) ?$_SESSION["intercambio_creado_mensaje"]:"";?></h2>
+
+ 
   <section>
     <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/intercambio/intercambioDirec.php" enctype="multipart/form-data" method="POST">
-      <label class="label" for="imagen1Dirreccion">Direccion de usuario implicado</label>
-      <input class="img inputPublicar inputLogin" type="file" name="imagen1Dirreccion">
-
-      <input class=" buttomProducto actualizarDatos" type="submit" value="Enviar">
-
-      <?php  $inter_exist =IntercambioUsuarioProveedor($db,$_SESSION["login_correcto"]["usu_codigo"])?>
-      <a  href="/exchangecity/proyectoSena/Includes/eliminar_intercambio.php" class="Eliminar actualizarDatos">eliminar</a>  
+    <h2 class="eliminado" >Opciones De Intercambio</h2>
+      <?php  $inter_exist=IntercambioUsuarioProveedor($db,$_SESSION["login_correcto"]["usu_codigo"])?>
+      <a  href="/exchangecity/proyectoSena/Includes/eliminar_intercambio.php" class="Eliminar actualizarDatos">Eliminar</a> 
+      <a  href="/exchangecity/proyectoSena/backend/intercambio/intercambioDirec.php?int_codigo=<?php  echo $inter_exist["int_codigo"];?>" class="Eliminar actualizarDatos">Intercambio Finalizado</a>   
         
     </form>
 

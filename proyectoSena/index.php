@@ -13,6 +13,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
       <h1>Productos Publicados</h1>
     </div>
     <h2 class="eliminado" ><?php echo isset($_SESSION["intercambio_eliminado"]) ?$_SESSION["intercambio_eliminado"]:"";?></h2>
+    <h2 class="eliminado" ><?php echo isset($_SESSION["intercambio_finalizado"]) ?$_SESSION["intercambio_finalizado"]:"";?></h2>
     <section>
        
     <?php $publicaciones=ConsultarPublicaciones($db); ?>
@@ -47,6 +48,7 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
     </div> -->
   <?php include_once "/wamp64/www/Exchangecity/proyectoSena/Includes/acount.php";
     unset($_SESSION["intercambio_eliminado"]);
+    unset($_SESSION["intercambio_finalizado"]);
     
   ?>
     </section>

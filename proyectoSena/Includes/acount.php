@@ -8,12 +8,12 @@ if(isset($_SESSION["usuario"])):?>
         $usuPub=mysqli_fetch_assoc($pubUsu);
         $intercambios_activos=IntercambioUsuarioProveedor($db,$_SESSION["login_correcto"]["usu_codigo"])   
       ?>
-      <?php if($usuPub && !isset($intercambios_activos)):?>
+      <?php if($usuPub && $intercambios_activos["int_exitosa"]==1):?>
         <a href="/exchangecity/proyectoSena/Includes/intercambio/crearIntercambio.php">Intercambio</a>
       <?php endif;?>
       
-      <?php if(isset($intercambios_activos)):?>
-        <a href="/exchangecity/proyectoSena/Includes/intercambio/2Intercambio.php">Intercambio en procesos</a>
+      <?php if($intercambios_activos["int_exitosa"]==0):?>
+        <a href="/exchangecity/proyectoSena/Includes/intercambio/2Intercambio.php">Opciones Intercambio</a>
       <?php endif;?>
     </div>
 <script src="/exchangecity/PROYECTOSENA/js/acount.js"></script>

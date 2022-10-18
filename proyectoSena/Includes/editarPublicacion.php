@@ -19,6 +19,8 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
     <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/publicacionEditar.php?pub_codigo=<?php echo $_REQUEST["pub_codigo"];?>" enctype="multipart/form-data" method="POST">
                 <label for="tituloPublicacion">titulo</label>
                 <input  class="inputPublicar inputLogin" type="text" name="tituloPublicacion" value="<?php echo $infoPublicacion["pub_titulo"] ?>">
+                <label for="idPub">Id De La Publicaion</label>
+                <input  class="inputPublicar inputLogin" type="text" name="idPub" readonly value="<?php echo $infoPublicacion["pub_codigo"] ?>">
                 <label for="descripcion">Descripcion de la Publicacion</label>
                 <textarea class="inputPublicar inputLogin" name="descripcion" ><?php echo $infoPublicacion["pub_descripcion"]?></textarea>
                 <label for="intereses">intereses de intercambio</label>

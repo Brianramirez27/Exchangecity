@@ -179,9 +179,19 @@ function IntercambioUsuarioProveedor($db,$cod_usuario){
     }
 }
 
-function ConsultarDireccionUsuPro($db,$cod_usuario){
-    $sql="";
+function CodigoUsuarioProveedor($db,$cod_usuario){
+    $sql="SELECT * FROM intercambio where (FK_dat_codigo_id_usu='$cod_usuario') or (FK_dat_codigo_id_pro='$cod_usuario')";
+    $existeUsuario=mysqli_query($db,$sql);
+    $existeInter=mysqli_fetch_assoc($existeUsuario);
+
+    if(isset($existeInter)){
+        return $existeInter;
+    }else{
+       
+    }
 }
+
+
 
 ?>
 
