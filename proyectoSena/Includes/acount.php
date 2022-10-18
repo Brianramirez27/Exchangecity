@@ -8,11 +8,11 @@ if(isset($_SESSION["usuario"])):?>
         $usuPub=mysqli_fetch_assoc($pubUsu);
         $intercambios_activos=IntercambioUsuarioProveedor($db,$_SESSION["login_correcto"]["usu_codigo"])   
       ?>
-      <?php if($usuPub & !isset($intercambios_activos)): ?>
-      <a href="/exchangecity/proyectoSena/Includes/intercambio/crearIntercambio.php">Intercambio</a>
+      <?php if($usuPub && !isset($intercambios_activos)):?>
+        <a href="/exchangecity/proyectoSena/Includes/intercambio/crearIntercambio.php">Intercambio</a>
       <?php endif;?>
       
-      <?php if(isset($_SESSION["intercambio_creado"])): ?>
+      <?php if(isset($intercambios_activos)):?>
         <a href="/exchangecity/proyectoSena/Includes/intercambio/2Intercambio.php">Intercambio en procesos</a>
       <?php endif;?>
     </div>

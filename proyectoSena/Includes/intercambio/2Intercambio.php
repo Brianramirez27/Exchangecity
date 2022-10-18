@@ -3,7 +3,6 @@ include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/conexionDB.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/header.php";
 include_once "/wamp64/www/exchangecity/proyectoSena/Includes/menulateral.php";
 include_once "/wamp64/www/Exchangecity/proyectoSena/funciones/masFunciones.php";
-$inter=$_REQUEST["int_codigo"];
 ?>
 
 <section id="container">
@@ -15,8 +14,11 @@ $inter=$_REQUEST["int_codigo"];
     <form class="publicarProductos" action="/exchangecity/PROYECTOSENA/backend/intercambio/intercambioDirec.php" enctype="multipart/form-data" method="POST">
       <label class="label" for="imagen1Dirreccion">Direccion de usuario implicado</label>
       <input class="img inputPublicar inputLogin" type="file" name="imagen1Dirreccion">
+
       <input class=" buttomProducto actualizarDatos" type="submit" value="Enviar">
-      <a  href="/exchangecity/proyectoSena/Includes/datosusuario.php?inte_codigo=<?php echo $inter?>" class="Eliminar actualizarDatos">eliminar</a>  
+
+      <?php  $inter_exist =IntercambioUsuarioProveedor($db,$_SESSION["login_correcto"]["usu_codigo"])?>
+      <a  href="/exchangecity/proyectoSena/Includes/eliminar_intercambio.php" class="Eliminar actualizarDatos">eliminar</a>  
         
     </form>
 
